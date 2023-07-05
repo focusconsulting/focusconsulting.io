@@ -166,6 +166,9 @@ const AboutPage: React.FC<PageProps> = () => {
                                 8(a) Business Development Program
                             </Text>
                             <Text fontSize="xl">
+                                DC Certified Small Business Enterprise
+                            </Text>
+                            <Text fontSize="xl">
                                 Massachusets Minority Small Business
                             </Text>
                         </Stack>
