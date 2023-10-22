@@ -14,9 +14,7 @@ import {
     MenuGroup,
     MenuItem,
     MenuList,
-    Text,
     useBreakpointValue,
-    useColorModeValue,
 } from '@chakra-ui/react'
 
 import { FiMenu } from 'react-icons/fi'
@@ -44,8 +42,8 @@ const Header = () => {
     const isDesktop = useBreakpointValue({ base: false, lg: true })
 
     return (
-        <Box as="section" backgroundColor="sectionHero.dark">
-            <Box as="nav" padding="8">
+        <Box as="section" backgroundColor="sectionHero.dark" w="100%">
+            <Box as="nav" padding={[0, '8']}>
                 <Container maxW="7xl">
                     <HStack spacing="20" justify="space-between">
                         <Link to="/">
@@ -81,7 +79,7 @@ const Header = () => {
                                     aria-label="Menu"
                                     as={IconButton}
                                     variant="ghost"
-                                    color="black"
+                                    color="white"
                                     size="sm"
                                     cursor="pointer"
                                     fontSize="3xl"
@@ -104,68 +102,6 @@ const Header = () => {
                     </HStack>
                 </Container>
             </Box>
-            {/* <Box as="nav" mb={{ base: 6, lg: 12 }}>
-                <Container
-                    maxW="6xl"
-                    py={{ base: 4, lg: 5 }}
-                    px={{ base: 5, md: 0 }}
-                >
-                    <HStack spacing="20" justify="space-between">
-                        <Link to="/">
-                            <Heading
-                                fontSize={{ base: '4xl', md: '5xl' }}
-                                fontWeight="extrabold"
-                                color="red.600"
-                            >
-                                focus
-                            </Heading>
-                        </Link>
-                        {isDesktop ? (
-                            <ButtonGroup variant="link" spacing="7">
-                                {content.nav.map((navLink) => {
-                                    return (
-                                        <Button
-                                            as={Link}
-                                            to={navLink.path}
-                                            fontSize="2xl"
-                                            fontWeight="semibold"
-                                            color="black"
-                                            variant="link"
-                                        >
-                                            {navLink.title}
-                                        </Button>
-                                    )
-                                })}
-                            </ButtonGroup>
-                        ) : (
-                            <Menu closeOnSelect={true}>
-                                <MenuButton
-                                    aria-label="Menu"
-                                    as={IconButton}
-                                    variant="ghost"
-                                    color="black"
-                                    size="sm"
-                                    cursor="pointer"
-                                    fontSize="3xl"
-                                    icon={<FiMenu />}
-                                />
-                                <MenuList minW="240px" color="black">
-                                    <MenuGroup>
-                                        {content.nav.map((navLink) => (
-                                            <MenuItem
-                                                as={Link}
-                                                to={navLink.path}
-                                            >
-                                                {navLink.title}
-                                            </MenuItem>
-                                        ))}
-                                    </MenuGroup>
-                                </MenuList>
-                            </Menu>
-                        )}
-                    </HStack>
-                </Container>
-            </Box> */}
             <Helmet htmlAttributes={{ lang: 'en' }} />
         </Box>
     )

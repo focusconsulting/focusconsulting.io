@@ -55,7 +55,11 @@ const Footer = () => {
 
     return (
         <Box bg="sectionHero.dark" as="footer" px="16" py="80px">
-            <HStack justifyContent={'space-between'} mb="8">
+            <Stack
+                direction={['column', 'row']}
+                justifyContent={'space-between'}
+                mb="8"
+            >
                 <Text
                     fontWeight={700}
                     fontSize={'48px'}
@@ -65,6 +69,7 @@ const Footer = () => {
                     focus
                 </Text>
                 <Box
+                    hideBelow={'md'}
                     color={'white'}
                     fontSize={'20px'}
                     fontWeight={400}
@@ -73,8 +78,13 @@ const Footer = () => {
                     <Text>Focus Consulting, LLC</Text>
                     <Text>1629 K St NW Suite 300</Text>
                 </Box>
-            </HStack>
-            <HStack spacing={8} mb="8">
+            </Stack>
+            <Stack
+                direction={['column', 'row']}
+                spacing={8}
+                mb="8"
+                alignItems={'start'}
+            >
                 {content.nav.map((navLink) => {
                     return (
                         <Button
@@ -90,15 +100,26 @@ const Footer = () => {
                         </Button>
                     )
                 })}
-            </HStack>
-            <HStack
+            </Stack>
+            <Stack
+                direction={['column', 'row']}
                 fontSize={'20px'}
                 fontWeight={400}
                 lineHeight={'150%'}
                 color={'white'}
             >
+                <Box
+                    hideFrom={'md'}
+                    color={'white'}
+                    fontSize={'20px'}
+                    fontWeight={400}
+                    lineHeight={'150%'}
+                >
+                    <Text>Focus Consulting, LLC</Text>
+                    <Text>1629 K St NW Suite 300</Text>
+                </Box>
                 <Text>2023 Focus Consulting, LLC. All rights reserved</Text>
-            </HStack>
+            </Stack>
         </Box>
     )
 }

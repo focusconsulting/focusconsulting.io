@@ -7,6 +7,7 @@ import {
     CardBody,
     CardHeader,
     Center,
+    Link as ChakraLink,
     Circle,
     Container,
     Flex,
@@ -16,11 +17,12 @@ import {
     SimpleGrid,
     Spacer,
     Square,
+    Stack,
     Text,
     VStack,
 } from '@chakra-ui/react'
 import { FaArrowRight, FaChevronRight, FaCode } from 'react-icons/fa'
-import { HeadFC, PageProps } from 'gatsby'
+import { HeadFC, Link, PageProps } from 'gatsby'
 
 import Layout from '../layout/Layout'
 import { SEO } from '../components/seo'
@@ -80,9 +82,13 @@ const IndexPage: React.FC<PageProps> = () => {
     return (
         <Layout>
             <Box as="section" backgroundColor="sectionHero.dark">
-                <Container centerContent py="80px" minW="container.xl">
+                <Container
+                    centerContent
+                    py="80px"
+                    minW={['container.xs', 'container.xl']}
+                >
                     <Flex justifyContent={'space-between'} w="100%">
-                        <Box w="620px">
+                        <Box w={['100%', '620px']}>
                             <Heading
                                 as="h1"
                                 color="white"
@@ -96,6 +102,7 @@ const IndexPage: React.FC<PageProps> = () => {
                                     pos: 'relative',
                                     top: '-25px',
                                     left: '110px',
+                                    hideBelow: 'md',
                                 }}
                             >
                                 Let's build better software
@@ -110,12 +117,17 @@ const IndexPage: React.FC<PageProps> = () => {
                                 We build human-centered and high value digital
                                 services that scales.
                             </Text>
-                            <Button backgroundColor={'primary'} color={'white'}>
+                            <Button
+                                as={Link}
+                                to="/services"
+                                backgroundColor={'primary'}
+                                color={'white'}
+                            >
                                 Find out how &nbsp; <FaArrowRight />
                             </Button>
                         </Box>
                         <Spacer />
-                        <Box w="532px">
+                        <Box w="532px" hideBelow={'md'}>
                             <Image src="/images/homepage-image.png"></Image>
                         </Box>
                     </Flex>
@@ -133,21 +145,35 @@ const IndexPage: React.FC<PageProps> = () => {
                 </Center>
                 <Box>
                     <SimpleGrid
-                        columns={4}
+                        columns={[1, 4]}
                         spacing={10}
-                        w={'container.md'}
+                        w={['container.xs', 'container.md']}
                         margin={'auto'}
                     >
                         {whoWeWorkWithLogs.map((logo) => (
                             <Square>
-                                <Image src={`/images/${logo}`} />
+                                <Image
+                                    w={'160px'}
+                                    h={'72px'}
+                                    src={`/images/${logo}`}
+                                />
                             </Square>
                         ))}
                     </SimpleGrid>
                 </Box>
             </Box>
-            <Box as="section" w={'100%'} backgroundColor={'gray.50'} py="112px">
-                <Box as="section" w={'container.xl'} margin={'auto'}>
+            <Box
+                as="section"
+                w={'100%'}
+                backgroundColor={'gray.50'}
+                py="112px"
+                px={['8', '0']}
+            >
+                <Box
+                    as="section"
+                    w={['container.xs', 'container.xl']}
+                    margin={'auto'}
+                >
                     <Center mb={14}>
                         <Box w={'container.md'}>
                             <Heading
@@ -170,10 +196,10 @@ const IndexPage: React.FC<PageProps> = () => {
                             </Text>
                         </Box>
                     </Center>
-                    <Box px="8">
+                    <Box px={['0', '8']}>
                         <SimpleGrid
-                            px={'48px'}
-                            columns={3}
+                            px={['0', '48px']}
+                            columns={[1, 3]}
                             spacing={10}
                             margin={'auto'}
                         >
@@ -210,9 +236,17 @@ const IndexPage: React.FC<PageProps> = () => {
                 </Box>
             </Box>
             <Box as="section" w={'100%'} backgroundColor={'white'} py="112px">
-                <Box as="section" w={'container.xl'} margin={'auto'}>
+                <Box
+                    as="section"
+                    w={['container.xs', 'container.xl']}
+                    margin={'auto'}
+                >
                     <Box margin={'auto'} px="8">
-                        <Box w="container.md" margin={'auto'} mb="14">
+                        <Box
+                            w={['container.xs', 'container.md']}
+                            margin={'auto'}
+                            mb="14"
+                        >
                             <Heading
                                 as="h2"
                                 fontSize={'5xl'}
@@ -235,8 +269,17 @@ const IndexPage: React.FC<PageProps> = () => {
                             </Text>
                         </Box>
                     </Box>
-                    <Box w="container.md" margin={'auto'} px="8">
-                        <HStack spacing={16} align={'start'} mb="8">
+                    <Box
+                        w={['container.xs', 'container.md']}
+                        margin={'auto'}
+                        px="8"
+                    >
+                        <Stack
+                            direction={['column', 'row']}
+                            spacing={16}
+                            align={'start'}
+                            mb="8"
+                        >
                             <Box>
                                 <SbaLogo />
                             </Box>
@@ -250,8 +293,8 @@ const IndexPage: React.FC<PageProps> = () => {
                                     8(a) Certified.
                                 </Text>
                             </Box>
-                        </HStack>
-                        <HStack spacing={16}>
+                        </Stack>
+                        <Stack direction={['column', 'row']} spacing={16}>
                             <Box>
                                 <Image
                                     minW="200px"
@@ -264,22 +307,29 @@ const IndexPage: React.FC<PageProps> = () => {
                                     fontWeight={400}
                                     lineHeight={'150%'}
                                 >
-                                    Part of the Digital Services Coalition, a
-                                    collection of agile technology and design
-                                    firms that serve—or aspire to serve—the
-                                    government
+                                    Part of the{' '}
+                                    <ChakraLink
+                                        isExternal
+                                        textDecor={'underline'}
+                                        href="https://digitalservicescoalition.org/#/"
+                                    >
+                                        Digital Services Coalition
+                                    </ChakraLink>
+                                    , a collection of agile technology and
+                                    design firms that serve—or aspire to
+                                    serve—the government
                                 </Text>
                             </Box>
-                        </HStack>
+                        </Stack>
                     </Box>
                 </Box>
             </Box>
             <Box as="section" w={'100%'} backgroundColor={'white'} py="112px">
                 <Box
-                    w="1038px"
+                    w={['container.xs', '1038px']}
                     margin={'auto'}
                     backgroundColor={'blue.800'}
-                    borderRadius={'29px'}
+                    borderRadius={['0px', '29px']}
                 >
                     <Box py="20" px="106px">
                         <Center>
@@ -316,6 +366,8 @@ const IndexPage: React.FC<PageProps> = () => {
                                     outlineColor={'white'}
                                     color="white"
                                     backgroundColor={'blue.800'}
+                                    as={Link}
+                                    to={'/contact'}
                                 >
                                     Contact us &nbsp; <FaChevronRight />
                                 </Button>
