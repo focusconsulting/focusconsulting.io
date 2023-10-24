@@ -12,7 +12,7 @@ export default ({ heading, subHeading, image, cta }: HeroProps) => (
     <Box as="section" backgroundColor="sectionHero.dark">
         <Container
             centerContent
-            py="80px"
+            py="section.md"
             minW={['container.xs', 'container.xl']}
         >
             <Flex justifyContent={'space-between'} w="100%">

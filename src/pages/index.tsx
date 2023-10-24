@@ -46,44 +46,85 @@ const whoWeWorkWithLogs = [
     'cdc-logo.png',
 ]
 
-const services = [
-    {
-        title: 'Design & Research',
-        description:
-            'We center our work on human-centered design and research to gain deep insights into user challenges and needs.',
-        logo: <FaLightbulb color="white" size={'24px'} />,
+const content = {
+    sectionHero: {
+        title: "Let's build better software",
+        subHeading:
+            'We build human-centered and high value digital services that scales.',
+        cta: 'Find out how',
     },
-    {
-        title: 'Engineering',
-        description:
-            'We bring deep expertise in full-stack web development using agile development processes. ',
-        logo: <FaCode color="white" size={'24px'} />,
+    sectionWhoWeWorkWith: {
+        title: 'Who we work with',
     },
-    {
-        title: 'Agile Delivery',
-        description:
-            'We bring deep expertise in full-stack web development using agile development process.',
-        logo: <FaProjectDiagram color="white" size={'24px'} />,
+    sectionServices: {
+        title: 'Delivering impact for government and industry',
+        subHeading:
+            'We work with our partners to provide a variety of services to deliver impactful outcomes.',
+        services: [
+            {
+                title: 'Design & Research',
+                description:
+                    'We center our work on human-centered design and research to gain deep insights into user challenges and needs.',
+                logo: <FaLightbulb color="white" size={'24px'} />,
+            },
+            {
+                title: 'Engineering',
+                description:
+                    'We bring deep expertise in full-stack web development using agile development processes. ',
+                logo: <FaCode color="white" size={'24px'} />,
+            },
+            {
+                title: 'Agile Delivery',
+                description:
+                    'We bring deep expertise in full-stack web development using agile development process.',
+                logo: <FaProjectDiagram color="white" size={'24px'} />,
+            },
+            {
+                title: 'Product Management',
+                description:
+                    'Our product managers work with their design and research colleagues to understand customer needs, work with our stakeholders, and craft high value solutions.',
+                logo: <FaBolt color="white" size={'24px'} />,
+            },
+            {
+                title: 'DevOps & Cloud Infrastructure',
+                description:
+                    'We develop and improve robust CI/CD processes that free up developers to focus on providing user value, accessibility, and privacy.',
+                logo: <FaLayerGroup color="white" size={'24px'} />,
+            },
+            {
+                title: 'Subject Matter Expert',
+                description:
+                    'Our projects span work that addresses equity, healthcare, benefits, and learning across government and commercial clients.',
+                logo: <FaBrain color="white" size={'24px'} />,
+            },
+        ],
     },
-    {
-        title: 'Product Management',
-        description:
-            'Our product managers work with their design and research colleagues to understand customer needs, work with our stakeholders, and craft high value solutions.',
-        logo: <FaBolt color="white" size={'24px'} />,
+    sectionAbout: {
+        title: 'Minority-owned digital service',
+        subHeading:
+            ' We are a minority-owned software digital services company focused on bringing about social impact.',
+        sba: "We're Small Business Administration (SBA) 8(a) Certified.",
+        dsc: (
+            <>
+                Part of the{' '}
+                <ChakraLink
+                    isExternal
+                    textDecor={'underline'}
+                    href="https://digitalservicescoalition.org/#/"
+                >
+                    Digital Services Coalition
+                </ChakraLink>
+                , a collection of agile technology and design firms that
+                serve—or aspire to serve—the government
+            </>
+        ),
     },
-    {
-        title: 'DevOps & Cloud Infrastructure',
-        description:
-            'We develop and improve robust CI/CD processes that free up developers to focus on providing user value, accessibility, and privacy.',
-        logo: <FaLayerGroup color="white" size={'24px'} />,
+    sectionContactUs: {
+        title: 'Have any questions?',
+        subHeading: "We'd love to hear from you!",
+        cta: 'Contact us',
     },
-    {
-        title: 'Subject Matter Expert',
-        description:
-            'Our projects span work that addresses equity, healthcare, benefits, and learning across government and commercial clients.',
-        logo: <FaBrain color="white" size={'24px'} />,
-    },
-]
+}
 
 const IndexPage: React.FC<PageProps> = () => {
     return (
@@ -105,12 +146,10 @@ const IndexPage: React.FC<PageProps> = () => {
                             hideBelow: 'md',
                         }}
                     >
-                        Let's build better software
+                        {content.sectionHero.title}
                     </Heading>
                 }
-                subHeading={
-                    'We build human-centered and high value digital services that scales.'
-                }
+                subHeading={content.sectionHero.subHeading}
                 image={<Image src="/images/index/homepage-image.png"></Image>}
                 cta={
                     <Button
@@ -119,11 +158,11 @@ const IndexPage: React.FC<PageProps> = () => {
                         backgroundColor={'primary'}
                         color={'white'}
                     >
-                        Find out how &nbsp; <FaArrowRight />
+                        {content.sectionHero.cta} &nbsp; <FaArrowRight />
                     </Button>
                 }
             />
-            <Box as="section" backgroundColor={'white'} py="80px">
+            <Box as="section" backgroundColor={'white'} py="section.md">
                 <Center
                     color={'black'}
                     fontSize={24}
@@ -131,7 +170,7 @@ const IndexPage: React.FC<PageProps> = () => {
                     fontWeight={600}
                     mb={16}
                 >
-                    Who we work with
+                    {content.sectionWhoWeWorkWith.title}
                 </Center>
                 <Box>
                     <SimpleGrid
@@ -156,7 +195,7 @@ const IndexPage: React.FC<PageProps> = () => {
                 as="section"
                 w={'100%'}
                 backgroundColor={'gray.50'}
-                py="112px"
+                py="section.lg"
                 px={['8', '0']}
             >
                 <Box
@@ -174,26 +213,25 @@ const IndexPage: React.FC<PageProps> = () => {
                                 textAlign={'center'}
                                 mb="6"
                             >
-                                Delivering impact for government and industry
+                                {content.sectionServices.title}
                             </Heading>
                             <Text
                                 fontWeight={400}
                                 lineHeight={'28px'}
                                 fontSize={'18px'}
                             >
-                                We work with our partners to provide a variety
-                                of services to deliver impactful outcomes.
+                                {content.sectionServices.subHeading}
                             </Text>
                         </Box>
                     </Center>
                     <Box px={['0', '8']}>
                         <SimpleGrid
-                            px={['0', '48px']}
+                            px={['0', '11']}
                             columns={[1, 3]}
                             spacing={10}
                             margin={'auto'}
                         >
-                            {services.map((service) => (
+                            {content.sectionServices.services.map((service) => (
                                 <Card p="8">
                                     <CardHeader p="0" mb={'3'}>
                                         <Circle
@@ -225,7 +263,12 @@ const IndexPage: React.FC<PageProps> = () => {
                     </Box>
                 </Box>
             </Box>
-            <Box as="section" w={'100%'} backgroundColor={'white'} py="112px">
+            <Box
+                as="section"
+                w={'100%'}
+                backgroundColor={'white'}
+                py="section.lg"
+            >
                 <Box
                     as="section"
                     w={['container.xs', 'container.xl']}
@@ -245,7 +288,7 @@ const IndexPage: React.FC<PageProps> = () => {
                                 textAlign={'center'}
                                 mb="6"
                             >
-                                Minority-owned digital service
+                                {content.sectionAbout.title}
                             </Heading>
                             <Text
                                 fontWeight={400}
@@ -253,9 +296,7 @@ const IndexPage: React.FC<PageProps> = () => {
                                 fontSize={'18px'}
                                 align={'center'}
                             >
-                                We are a minority-owned software digital
-                                services company focused on bringing about
-                                social impact.
+                                {content.sectionAbout.subHeading}
                             </Text>
                         </Box>
                     </Box>
@@ -279,8 +320,7 @@ const IndexPage: React.FC<PageProps> = () => {
                                     fontWeight={400}
                                     lineHeight={'150%'}
                                 >
-                                    We're Small Business Administration (SBA)
-                                    8(a) Certified.
+                                    {content.sectionAbout.sba}
                                 </Text>
                             </Box>
                         </Stack>
@@ -297,24 +337,19 @@ const IndexPage: React.FC<PageProps> = () => {
                                     fontWeight={400}
                                     lineHeight={'150%'}
                                 >
-                                    Part of the{' '}
-                                    <ChakraLink
-                                        isExternal
-                                        textDecor={'underline'}
-                                        href="https://digitalservicescoalition.org/#/"
-                                    >
-                                        Digital Services Coalition
-                                    </ChakraLink>
-                                    , a collection of agile technology and
-                                    design firms that serve—or aspire to
-                                    serve—the government
+                                    {content.sectionAbout.dsc}
                                 </Text>
                             </Box>
                         </Stack>
                     </Box>
                 </Box>
             </Box>
-            <Box as="section" w={'100%'} backgroundColor={'white'} py="112px">
+            <Box
+                as="section"
+                w={'100%'}
+                backgroundColor={'white'}
+                py="section.lg"
+            >
                 <Box
                     w={['container.xs', '1038px']}
                     margin={'auto'}
@@ -346,11 +381,10 @@ const IndexPage: React.FC<PageProps> = () => {
                                     />
                                 </HStack>
                                 <Heading as="h4" color="white" mb="6">
-                                    Have any questions?
+                                    {content.sectionContactUs.title}
                                 </Heading>
                                 <Text color={'white'} mb="8">
-                                    Yorem ipsum dolor sit amet, consectetur
-                                    adipiscing elit.
+                                    {content.sectionContactUs.subHeading}
                                 </Text>
                                 <Button
                                     outlineColor={'white'}
@@ -359,7 +393,8 @@ const IndexPage: React.FC<PageProps> = () => {
                                     as={Link}
                                     to={'/contact'}
                                 >
-                                    Contact us &nbsp; <FaChevronRight />
+                                    {content.sectionContactUs.cta} &nbsp;{' '}
+                                    <FaChevronRight />
                                 </Button>
                             </VStack>
                         </Center>

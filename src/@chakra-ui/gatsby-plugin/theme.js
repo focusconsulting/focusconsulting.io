@@ -16,6 +16,13 @@ const overrides = {
             800: '#102871',
         },
     },
+    space: {
+        11: '48px',
+        section: {
+            md: '80px',
+            lg: '112px',
+        },
+    },
 }
 
 const theme = extendTheme(overrides)
