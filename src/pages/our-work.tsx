@@ -16,12 +16,10 @@ import { HeadFC, PageProps } from 'gatsby'
 import {
     MdBabyChangingStation,
     MdLocalHospital,
-    MdOutlineDesignServices,
     MdOutlineSchool,
-    MdScreenSearchDesktop,
 } from 'react-icons/md'
 
-import Hero from '../layout/Hero'
+import Hero2 from '../layout/Hero'
 import Layout from '../layout/Layout'
 import { SEO } from '../components/seo'
 import Section from '../layout/Section'
@@ -193,9 +191,20 @@ const AboutPage: React.FC<PageProps> = () => {
 
     return (
         <Layout>
-            <Hero
-                title={content.heroTitle}
-                description={content.heroDescription}
+            <Hero2
+                heading={
+                    <Heading
+                        as="h1"
+                        color="white"
+                        fontSize={'7xl'}
+                        fontWeight={700}
+                        lineHeight={'120%'}
+                        mb="6"
+                    >
+                        {content.heroTitle}
+                    </Heading>
+                }
+                subHeading={content.heroDescription}
             />
             {content.sections.map((section) => {
                 return (

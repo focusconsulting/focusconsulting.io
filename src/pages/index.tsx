@@ -9,24 +9,31 @@ import {
     Center,
     Link as ChakraLink,
     Circle,
-    Container,
-    Flex,
     HStack,
     Heading,
     Image,
     SimpleGrid,
-    Spacer,
     Square,
     Stack,
     Text,
     VStack,
 } from '@chakra-ui/react'
-import { FaArrowRight, FaChevronRight, FaCode } from 'react-icons/fa'
+import {
+    FaArrowRight,
+    FaBolt,
+    FaBrain,
+    FaChevronRight,
+    FaCode,
+    FaLayerGroup,
+    FaLightbulb,
+    FaProjectDiagram,
+} from 'react-icons/fa'
 import { HeadFC, Link, PageProps } from 'gatsby'
 
+import Hero2 from '../layout/Hero'
 import Layout from '../layout/Layout'
 import { SEO } from '../components/seo'
-import SbaLogo from './sba-logo'
+import SbaLogo from '../components/sba-logo'
 
 const whoWeWorkWithLogs = [
     'nj-logo.png',
@@ -44,95 +51,78 @@ const services = [
         title: 'Design & Research',
         description:
             'We center our work on human-centered design and research to gain deep insights into user challenges and needs.',
+        logo: <FaLightbulb color="white" size={'24px'} />,
+    },
+    {
+        title: 'Engineering',
+        description:
+            'We bring deep expertise in full-stack web development using agile development processes. ',
         logo: <FaCode color="white" size={'24px'} />,
     },
     {
-        title: 'Design & Research',
+        title: 'Agile Delivery',
         description:
-            'We center our work on human-centered design and research to gain deep insights into user challenges and needs.',
-        logo: <FaCode color="white" size={'24px'} />,
+            'We bring deep expertise in full-stack web development using agile development process.',
+        logo: <FaProjectDiagram color="white" size={'24px'} />,
     },
     {
-        title: 'Design & Research',
+        title: 'Product Management',
         description:
-            'We center our work on human-centered design and research to gain deep insights into user challenges and needs.',
-        logo: <FaCode color="white" size={'24px'} />,
+            'Our product managers work with their design and research colleagues to understand customer needs, work with our stakeholders, and craft high value solutions.',
+        logo: <FaBolt color="white" size={'24px'} />,
     },
     {
-        title: 'Design & Research',
+        title: 'DevOps & Cloud Infrastructure',
         description:
-            'We center our work on human-centered design and research to gain deep insights into user challenges and needs.',
-        logo: <FaCode color="white" size={'24px'} />,
+            'We develop and improve robust CI/CD processes that free up developers to focus on providing user value, accessibility, and privacy.',
+        logo: <FaLayerGroup color="white" size={'24px'} />,
     },
     {
-        title: 'Design & Research',
+        title: 'Subject Matter Expert',
         description:
-            'We center our work on human-centered design and research to gain deep insights into user challenges and needs.',
-        logo: <FaCode color="white" size={'24px'} />,
-    },
-    {
-        title: 'Design & Research',
-        description:
-            'We center our work on human-centered design and research to gain deep insights into user challenges and needs.',
-        logo: <FaCode color="white" size={'24px'} />,
+            'Our projects span work that addresses equity, healthcare, benefits, and learning across government and commercial clients.',
+        logo: <FaBrain color="white" size={'24px'} />,
     },
 ]
 
 const IndexPage: React.FC<PageProps> = () => {
     return (
         <Layout>
-            <Box as="section" backgroundColor="sectionHero.dark">
-                <Container
-                    centerContent
-                    py="80px"
-                    minW={['container.xs', 'container.xl']}
-                >
-                    <Flex justifyContent={'space-between'} w="100%">
-                        <Box w={['100%', '620px']}>
-                            <Heading
-                                as="h1"
-                                color="white"
-                                fontSize={'7xl'}
-                                fontWeight={700}
-                                lineHeight={'120%'}
-                                mb="6"
-                                _after={{
-                                    content:
-                                        'url("/images/homepage-swish.svg")',
-                                    pos: 'relative',
-                                    top: '-25px',
-                                    left: '110px',
-                                    hideBelow: 'md',
-                                }}
-                            >
-                                Let's build better software
-                            </Heading>
-                            <Text
-                                color="white"
-                                lineHeight={'32px'}
-                                fontWeight={500}
-                                fontSize={'24px'}
-                                mb="10"
-                            >
-                                We build human-centered and high value digital
-                                services that scales.
-                            </Text>
-                            <Button
-                                as={Link}
-                                to="/services"
-                                backgroundColor={'primary'}
-                                color={'white'}
-                            >
-                                Find out how &nbsp; <FaArrowRight />
-                            </Button>
-                        </Box>
-                        <Spacer />
-                        <Box w="532px" hideBelow={'md'}>
-                            <Image src="/images/homepage-image.png"></Image>
-                        </Box>
-                    </Flex>
-                </Container>
-            </Box>
+            <Hero2
+                heading={
+                    <Heading
+                        as="h1"
+                        color="white"
+                        fontSize={'7xl'}
+                        fontWeight={700}
+                        lineHeight={'120%'}
+                        mb="6"
+                        _after={{
+                            content: 'url("/images/index/homepage-swish.svg")',
+                            pos: 'relative',
+                            top: '-25px',
+                            left: '110px',
+                            hideBelow: 'md',
+                        }}
+                    >
+                        Let's build better software
+                    </Heading>
+                }
+                subHeading={
+                    'We build human-centered and high value digital services that scales.'
+                }
+                image={<Image src="/images/index/homepage-image.png"></Image>}
+                cta={
+                    <Button
+                        as={Link}
+                        to="/services"
+                        backgroundColor={'primary'}
+                        color={'white'}
+                    >
+                        Find out how &nbsp; <FaArrowRight />
+                    </Button>
+                }
+            />
             <Box as="section" backgroundColor={'white'} py="80px">
                 <Center
                     color={'black'}
@@ -339,20 +329,20 @@ const IndexPage: React.FC<PageProps> = () => {
                                         maxW={'90px'}
                                         pos={'relative'}
                                         left={'25px'}
-                                        src="/images/homepage-contact-us-left.png"
+                                        src="/images/index/homepage-contact-us-left.png"
                                     />
                                     <Image
                                         maxW={'116px'}
                                         pos={'relative'}
                                         top={'-5px'}
                                         zIndex={100}
-                                        src="/images/homepage-contact-us-middle.svg"
+                                        src="/images/index/homepage-contact-us-middle.svg"
                                     />
                                     <Image
                                         maxW={'90px'}
                                         pos={'relative'}
                                         right={'25px'}
-                                        src="/images/homepage-contact-us-right.svg"
+                                        src="/images/index/homepage-contact-us-right.svg"
                                     />
                                 </HStack>
                                 <Heading as="h4" color="white" mb="6">

@@ -1,38 +1,41 @@
-import {
-  Box,
-  Heading,
-  ButtonGroup,
-  Container,
-  Button,
-  HStack,
-  IconButton,
-  Text,
-  useBreakpointValue,
-  useColorModeValue,
-} from '@chakra-ui/react'
-import { Link } from "gatsby"
-import * as React from 'react'
-import { FiMenu } from 'react-icons/fi'
+import { Box, Container, Flex, Spacer, Text } from '@chakra-ui/react'
+import React, { ReactNode } from 'react'
 
-interface MainProps {
-  title?: string,
-  description: string,
-  ctaTitle?: string,
-  ctaPath?: string,
+type HeroProps = {
+    heading: ReactNode
+    subHeading: String
+    image?: ReactNode
+    cta?: ReactNode
 }
 
-const Hero = ({ title, description, ctaTitle, ctaPath }: MainProps) => {
-  return (    
-    <Box as="section" mb={{ base: 6, md: 12 }}>
-      <Container maxW="6xl" py={{ base: 4, lg: 5}} px={{ base: 5, md: 0 }}>
-        <Box width={{ base: '100%', md: '75%' }}>
-          <Heading fontSize={{ base: '5xl', md: '7xl' }} fontWeight="extrabold" mb={{ base: 3, md: 5}}>{title}</Heading>
-          <Text fontSize={{ base: 'xl', md: '2xl' }}>{description}</Text>
-          { ctaTitle && ctaPath && <Button mb={{ base: 3, md: 5}} variant="solid" as={Link} to={ctaPath}>{ctaTitle}</Button>}
-        </Box>
-      </Container>      
+export default ({ heading, subHeading, image, cta }: HeroProps) => (
+    <Box as="section" backgroundColor="sectionHero.dark">
+        <Container
+            centerContent
+            py="80px"
+            minW={['container.xs', 'container.xl']}
+        >
+            <Flex justifyContent={'space-between'} w="100%">
+                <Box w={['100%', '620px']}>
+                    {heading}
+                    <Text
+                        color="white"
+                        lineHeight={'32px'}
+                        fontWeight={500}
+                        fontSize={'24px'}
+                        mb="10"
+                    >
+                        {subHeading}
+                    </Text>
+                    {cta}
+                </Box>
+                <Spacer />
+                {image && (
+                    <Box w="532px" hideBelow={'md'}>
+                        {image}
+                    </Box>
+                )}
+            </Flex>
+        </Container>
     </Box>
-  )
-}
-
-export default Hero;
+)
