@@ -39,16 +39,14 @@ const content = {
                     icon: MdScreenSearchDesktop,
                 },
             ],
-            backgroundColor: 'blue.700',
-            fontColor: 'white',
+            backgroundColor: 'white',
             customId: 'services',
         },
         {
             title: 'Who We Work With',
             description:
                 'We work across diverse industries and government to provide our deep expertise in digital services.',
-            // backgroundColor: 'blue.700',
-            // fontColor: 'white',
+            backgroundColor: 'gray.50',
             items: [
                 {
                     title: 'Federal Government',
@@ -83,7 +81,7 @@ const content = {
         {
             title: "Let's Build Together",
             customId: 'work-with-us',
-            backgroundColor: 'orange.300',
+            backgroundColor: 'white',
         },
     ],
 }
@@ -195,7 +193,6 @@ const AboutPage: React.FC<PageProps> = () => {
                         title={section.title}
                         description={section.description}
                         backgroundColor={section.backgroundColor}
-                        fontColor={section.fontColor}
                         items={section.items}
                     >
                         {section.customId &&

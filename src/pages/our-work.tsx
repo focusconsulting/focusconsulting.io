@@ -58,8 +58,7 @@ const content = {
                     icon: MdOutlineSchool,
                 },
             ],
-            backgroundColor: 'blue.700',
-            fontColor: 'white',
+            backgroundColor: 'white',
         },
         {
             title: 'Projects',
@@ -212,7 +211,6 @@ const AboutPage: React.FC<PageProps> = () => {
                         title={section.title}
                         description={section.description}
                         backgroundColor={section.backgroundColor}
-                        fontColor={section.fontColor}
                         items={section.items}
                     >
                         {section.customId &&
