@@ -1,9 +1,9 @@
 import * as React from 'react'
 
-import { Button, VStack } from '@chakra-ui/react'
-import { HeadFC, Link, PageProps } from 'gatsby'
+import { HeadFC, PageProps } from 'gatsby'
 
-import Hero from '../layout/Hero'
+import { Heading } from '@chakra-ui/react'
+import Hero2 from '../layout/Hero'
 import Layout from '../layout/Layout'
 import { SEO } from '../components/seo'
 import Section from '../layout/Section'
@@ -17,9 +17,20 @@ const content = {
 const IndexPage: React.FC<PageProps> = () => {
     return (
         <Layout>
-            <Hero
-                title={content.heroTitle}
-                description={content.heroDescription}
+            <Hero2
+                heading={
+                    <Heading
+                        as="h1"
+                        color="white"
+                        fontSize={'7xl'}
+                        fontWeight={700}
+                        lineHeight={'120%'}
+                        mb="6"
+                    >
+                        {content.heroTitle}
+                    </Heading>
+                }
+                subHeading={content.heroDescription}
             />
             <Section title="Get In Touch">
                 <iframe

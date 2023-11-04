@@ -14,9 +14,7 @@ import {
     MenuGroup,
     MenuItem,
     MenuList,
-    Text,
     useBreakpointValue,
-    useColorModeValue,
 } from '@chakra-ui/react'
 
 import { FiMenu } from 'react-icons/fi'
@@ -44,19 +42,15 @@ const Header = () => {
     const isDesktop = useBreakpointValue({ base: false, lg: true })
 
     return (
-        <Box as="section">
-            <Box as="nav" mb={{ base: 6, lg: 12 }}>
-                <Container
-                    maxW="6xl"
-                    py={{ base: 4, lg: 5 }}
-                    px={{ base: 5, md: 0 }}
-                >
+        <Box as="section" backgroundColor="sectionHero.dark" w="100%">
+            <Box as="nav" padding={[0, '8']}>
+                <Container maxW="7xl">
                     <HStack spacing="20" justify="space-between">
                         <Link to="/">
                             <Heading
-                                fontSize={{ base: '4xl', md: '5xl' }}
-                                fontWeight="extrabold"
-                                color="red.600"
+                                fontSize="5xl"
+                                fontWeight="700"
+                                color="primary"
                             >
                                 focus
                             </Heading>
@@ -69,9 +63,10 @@ const Header = () => {
                                             as={Link}
                                             to={navLink.path}
                                             fontSize="2xl"
-                                            fontWeight="semibold"
-                                            color="black"
+                                            fontWeight="500"
+                                            color="white"
                                             variant="link"
+                                            line-height="32px"
                                         >
                                             {navLink.title}
                                         </Button>
@@ -84,7 +79,7 @@ const Header = () => {
                                     aria-label="Menu"
                                     as={IconButton}
                                     variant="ghost"
-                                    color="black"
+                                    color="white"
                                     size="sm"
                                     cursor="pointer"
                                     fontSize="3xl"

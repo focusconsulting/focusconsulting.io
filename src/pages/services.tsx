@@ -1,20 +1,14 @@
 import * as React from 'react'
 
 import { Box, Button, Heading, SimpleGrid, Stack, Text } from '@chakra-ui/react'
-import { FaCode, FaEquals } from 'react-icons/fa'
 import { HeadFC, Link, PageProps } from 'gatsby'
-import {
-    MdBabyChangingStation,
-    MdLocalHospital,
-    MdOutlineDesignServices,
-    MdOutlineSchool,
-    MdScreenSearchDesktop,
-} from 'react-icons/md'
+import { MdOutlineDesignServices, MdScreenSearchDesktop } from 'react-icons/md'
 import { TbBuilding, TbBuildingBank } from 'react-icons/tb'
 
+import { FaCode } from 'react-icons/fa'
 import { FiHeart } from 'react-icons/fi'
 import { GiCongress } from 'react-icons/gi'
-import Hero from '../layout/Hero'
+import Hero2 from '../layout/Hero'
 import Layout from '../layout/Layout'
 import { SEO } from '../components/seo'
 import Section from '../layout/Section'
@@ -45,16 +39,14 @@ const content = {
                     icon: MdScreenSearchDesktop,
                 },
             ],
-            backgroundColor: 'blue.700',
-            fontColor: 'white',
+            backgroundColor: 'white',
             customId: 'services',
         },
         {
             title: 'Who We Work With',
             description:
                 'We work across diverse industries and government to provide our deep expertise in digital services.',
-            // backgroundColor: 'blue.700',
-            // fontColor: 'white',
+            backgroundColor: 'gray.50',
             items: [
                 {
                     title: 'Federal Government',
@@ -89,7 +81,7 @@ const content = {
         {
             title: "Let's Build Together",
             customId: 'work-with-us',
-            backgroundColor: 'orange.300',
+            backgroundColor: 'white',
         },
     ],
 }
@@ -180,9 +172,20 @@ const AboutPage: React.FC<PageProps> = () => {
 
     return (
         <Layout>
-            <Hero
-                title={content.heroTitle}
-                description={content.heroDescription}
+            <Hero2
+                heading={
+                    <Heading
+                        as="h1"
+                        color="white"
+                        fontSize={'7xl'}
+                        fontWeight={700}
+                        lineHeight={'120%'}
+                        mb="6"
+                    >
+                        {content.heroTitle}
+                    </Heading>
+                }
+                subHeading={content.heroDescription}
             />
             {content.sections.map((section) => {
                 return (
@@ -190,7 +193,6 @@ const AboutPage: React.FC<PageProps> = () => {
                         title={section.title}
                         description={section.description}
                         backgroundColor={section.backgroundColor}
-                        fontColor={section.fontColor}
                         items={section.items}
                     >
                         {section.customId &&
@@ -198,20 +200,6 @@ const AboutPage: React.FC<PageProps> = () => {
                     </Section>
                 )
             })}
-            {/* <Section
-        title={content.ourStoryTitle}
-        description={content.ourStoryDescription}
-        backgroundColor="blue.700"
-        fontColor="white"
-      > 
-      </Section>
-      <Section
-        title={content.valuesTitle}
-      > 
-        <Box width={{ base: '100%', md: '75%' }}>
-          {values}
-        </Box>        
-      </Section> */}
         </Layout>
     )
 }

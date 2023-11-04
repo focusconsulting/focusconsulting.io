@@ -11,7 +11,7 @@ import {
 } from '@chakra-ui/react'
 import { HeadFC, Link, PageProps } from 'gatsby'
 
-import Hero from '../layout/Hero'
+import Hero2 from '../layout/Hero'
 import Layout from '../layout/Layout'
 import { SEO } from '../components/seo'
 import Section from '../layout/Section'
@@ -25,13 +25,13 @@ const content = {
             title: 'Our Story',
             description:
                 'Focus was founded in 2019 to bring together a diverse set of industry and government experiences, and best-in-class digital services capabilities in agile software development, human-centered design, and DevSecOps. Our projects span work that addresses equity, healthcare, benefits, and learning across government and commercial clients.',
-            backgroundColor: 'blue.700',
-            fontColor: 'white',
+            backgroundColor: 'white',
         },
         {
             title: 'Core Values',
             description:
                 'Our values guide both how we work with our colleagues and how we view our partnerships.',
+            backgroundColor: 'gray.50',
             items: [
                 {
                     title: 'Clarity and transparency',
@@ -89,7 +89,7 @@ const content = {
                         'Our project managers tie everything together by supporting our planning, stakeholder coordination, and delivery work. We use strong documentation and communication practices to work efficiently in an increasingly distributed world.',
                 },
             ],
-            backgroundColor: 'orange.300',
+            backgroundColor: 'white',
             customId: 'expertise',
             anchor: 'expertise',
         },
@@ -416,9 +416,20 @@ const AboutPage: React.FC<PageProps> = () => {
 
     return (
         <Layout>
-            <Hero
-                title={content.heroTitle}
-                description={content.heroDescription}
+            <Hero2
+                heading={
+                    <Heading
+                        as="h1"
+                        color="white"
+                        fontSize={'7xl'}
+                        fontWeight={700}
+                        lineHeight={'120%'}
+                        mb="6"
+                    >
+                        {content.heroTitle}
+                    </Heading>
+                }
+                subHeading={content.heroDescription}
             />
             {content.sections.map((section) => {
                 return (
@@ -426,7 +437,6 @@ const AboutPage: React.FC<PageProps> = () => {
                         title={section.title}
                         description={section.description}
                         backgroundColor={section.backgroundColor}
-                        fontColor={section.fontColor}
                         items={section.items}
                         anchor={section.anchor}
                     >
