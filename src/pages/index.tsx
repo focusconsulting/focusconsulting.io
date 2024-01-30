@@ -331,10 +331,10 @@ const IndexPage: React.FC<PageProps> = () => {
                             align={'start'}
                             mb="8"
                         >
-                            <Box>
+                            <Box minW="200px">
                                 <Image
-                                    minW="200px"
-                                    src="images/dc-cbe-logo.png"
+                                    w="100px"
+                                    src="images/index/dc-cbe-logo.png"
                                 />
                             </Box>
                             <Box>
