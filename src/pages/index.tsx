@@ -104,6 +104,7 @@ const content = {
         subHeading:
             ' We are a minority-owned software digital services company focused on bringing about social impact.',
         sba: "We're Small Business Administration (SBA) 8(a) Certified.",
+        dccbe: "We're based in DC and certified as a Small Business Enterprise.",
         dsc: (
             <>
                 Part of the{' '}
@@ -321,6 +322,28 @@ const IndexPage: React.FC<PageProps> = () => {
                                     lineHeight={'150%'}
                                 >
                                     {content.sectionAbout.sba}
+                                </Text>
+                            </Box>
+                        </Stack>
+                        <Stack
+                            direction={['column', 'row']}
+                            spacing={16}
+                            align={'start'}
+                            mb="8"
+                        >
+                            <Box>
+                                <Image
+                                    minW="200px"
+                                    src="images/dc-cbe-logo.png"
+                                />
+                            </Box>
+                            <Box>
+                                <Text
+                                    fontSize={'18px'}
+                                    fontWeight={400}
+                                    lineHeight={'150%'}
+                                >
+                                    {content.sectionAbout.dccbe}
                                 </Text>
                             </Box>
                         </Stack>
