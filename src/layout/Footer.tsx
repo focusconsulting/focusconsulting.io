@@ -116,7 +116,8 @@ const Footer = () => {
                     lineHeight={'150%'}
                 >
                     <Text>Focus Consulting, LLC</Text>
-                    <Text>1629 K St NW Suite 300</Text>
+                    <Text>716 Roxboro Pl NW</Text>
+                    <Text>Washington, DC 20011</Text>
                 </Box>
                 <Text>2023 Focus Consulting, LLC. All rights reserved</Text>
             </Stack>
