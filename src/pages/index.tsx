@@ -50,7 +50,7 @@ const content = {
     sectionHero: {
         title: "Let's build better software",
         subHeading:
-            'We build human-centered and high value digital services that scales.',
+            'We build human-centered and high value digital services that scale.',
         cta: 'Find out how',
     },
     sectionWhoWeWorkWith: {

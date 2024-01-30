@@ -45,8 +45,8 @@ const content = {
         },
     ],
     businessName: 'Focus Consulting, LLC',
-    businessAddress1: '1629 K St NW Suite 300',
-    businessAddress2: 'Washington, DC 20006',
+    businessAddress1: '716 Roxboro Pl NW',
+    businessAddress2: 'Washington, DC 20011',
     copyright: 'Focus Consulting, LLC. All rights reserved.',
 }
 
@@ -75,8 +75,9 @@ const Footer = () => {
                     fontWeight={400}
                     lineHeight={'150%'}
                 >
-                    <Text>Focus Consulting, LLC</Text>
-                    <Text>1629 K St NW Suite 300</Text>
+                    <Text>{content.businessName}</Text>
+                    <Text>{content.businessAddress1}</Text>
+                    <Text>{content.businessAddress2}</Text>
                 </Box>
             </Stack>
             <Stack
@@ -115,9 +116,9 @@ const Footer = () => {
                     fontWeight={400}
                     lineHeight={'150%'}
                 >
-                    <Text>Focus Consulting, LLC</Text>
-                    <Text>716 Roxboro Pl NW</Text>
-                    <Text>Washington, DC 20011</Text>
+                    <Text>{content.businessName}</Text>
+                    <Text>{content.businessAddress1}</Text>
+                    <Text>{content.businessAddress2}</Text>
                 </Box>
                 <Text>2023 Focus Consulting, LLC. All rights reserved</Text>
             </Stack>
