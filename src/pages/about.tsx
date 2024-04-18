@@ -103,6 +103,12 @@ const content = {
 
 const team = [
     {
+      name: 'Japhet Teshale',
+      title: 'Software Engineer',
+      photo: '/images/staff/japhet-teshale.png',
+      department: 'engineering',
+    },
+    {
         name: 'Eyuel Abebe',
         title: 'Software Engineer',
         photo: '/images/staff/eyuel.webp',
