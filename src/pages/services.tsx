@@ -146,7 +146,15 @@ const AboutPage: React.FC<PageProps> = () => {
                             <Text fontSize="xl">
                                 <b>541512</b>: Computer Systems Design Services
                             </Text>
-                            <Text fontSize="xl"></Text>
+                            <Text fontSize="xl">
+                                <b>518210</b>: Data Processing, Hosting, and Related Services
+                            </Text>
+                            <Text fontSize="xl">
+                                <b>511210</b>: Software Publishers 
+                            </Text>
+                            <Text fontSize="xl">
+                                <b>541519</b>: Other Computer Related Services
+                            </Text>
                         </Stack>
                     </Box>
                     <Box>
@@ -161,7 +169,10 @@ const AboutPage: React.FC<PageProps> = () => {
                                 DC Certified Small Business Enterprise
                             </Text>
                             <Text fontSize="xl">
-                                Massachusets Minority Small Business
+                                Massachusets Minority Small Business Enterprise
+                            </Text>
+                            <Text fontSize="xl">
+                                Vermont Minority Small Business Enterprise
                             </Text>
                         </Stack>
                     </Box>

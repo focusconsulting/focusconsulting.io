@@ -9,6 +9,7 @@ import {
     HStack,
     Heading,
     IconButton,
+    Image,
     Menu,
     MenuButton,
     MenuGroup,
@@ -43,17 +44,18 @@ const Header = () => {
 
     return (
         <Box as="section" backgroundColor="sectionHero.dark" w="100%">
-            <Box as="nav" padding={[0, '8']}>
+            <Box as="nav" padding={[4, '8']}>
                 <Container maxW="7xl">
                     <HStack spacing="20" justify="space-between">
                         <Link to="/">
-                            <Heading
+                            {/* <Heading
                                 fontSize="5xl"
                                 fontWeight="700"
                                 color="primary"
                             >
                                 focus
-                            </Heading>
+                            </Heading> */}
+                            <Image height={{ base: '35px', md: '50px' }} src="/images/index/focus-logo-no-background.png" />
                         </Link>
                         {isDesktop ? (
                             <ButtonGroup variant="link" spacing="7">

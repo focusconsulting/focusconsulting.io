@@ -185,7 +185,7 @@ const IndexPage: React.FC<PageProps> = () => {
                                 <Image
                                     w={'160px'}
                                     h={'72px'}
-                                    src={`/images/${logo}`}
+                                    src={`/images/index/${logo}`}
                                 />
                             </Square>
                         ))}
@@ -351,7 +351,7 @@ const IndexPage: React.FC<PageProps> = () => {
                             <Box>
                                 <Image
                                     minW="200px"
-                                    src="images/homepage-dsc-logo.png"
+                                    src="/images/index/homepage-dsc-logo.png"
                                 />
                             </Box>
                             <Box>

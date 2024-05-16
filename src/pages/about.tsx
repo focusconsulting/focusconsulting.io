@@ -427,7 +427,7 @@ const AboutPage: React.FC<PageProps> = () => {
                     <Heading
                         as="h1"
                         color="white"
-                        fontSize={'7xl'}
+                        fontSize={{ base: '5xl', md: '7xl' }}
                         fontWeight={700}
                         lineHeight={'120%'}
                         mb="6"

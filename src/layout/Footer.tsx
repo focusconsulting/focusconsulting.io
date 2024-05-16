@@ -11,6 +11,7 @@ import {
     IconButton,
     Stack,
     Text,
+    Image,
     useBreakpointValue,
     useColorModeValue,
 } from '@chakra-ui/react'
@@ -54,20 +55,21 @@ const Footer = () => {
     const isDesktop = useBreakpointValue({ base: false, lg: true })
 
     return (
-        <Box bg="sectionHero.dark" as="footer" px="16" py="80px">
+        <Box bg="sectionHero.dark" as="footer" px={[8, 16]} py="80px">
             <Stack
                 direction={['column', 'row']}
                 justifyContent={'space-between'}
                 mb="8"
             >
-                <Text
+                <Image height={['auto', '35px']} width={['100px', 'auto']} src="/images/index/focus-logo-no-background.png" />
+                {/* <Text
                     fontWeight={700}
                     fontSize={'48px'}
                     lineHeight={'100%'}
                     color={'primary'}
                 >
                     focus
-                </Text>
+                </Text> */}
                 <Box
                     hideBelow={'md'}
                     color={'white'}
@@ -96,6 +98,7 @@ const Footer = () => {
                             as={Link}
                             to={navLink.path}
                             variant="link"
+                            textDecor="underline"
                         >
                             {navLink.title}
                         </Button>
