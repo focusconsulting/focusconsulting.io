@@ -22,7 +22,7 @@ import { Link } from 'gatsby'
 const content = {
     contactText: 'Get In Touch',
     contactButton: 'Contact',
-    tagLine: 'Build Better Software',
+    tagLine: 'Impactful Digital Services',
     nav: [
         {
             title: 'Home',

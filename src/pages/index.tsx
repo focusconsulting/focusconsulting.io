@@ -48,7 +48,7 @@ const whoWeWorkWithLogs = [
 
 const content = {
     sectionHero: {
-        title: "Let's build better software",
+        title: "Impactful Digital Services",
         subHeading:
             'We build human-centered and high value digital services that scale.',
         cta: 'Find out how',

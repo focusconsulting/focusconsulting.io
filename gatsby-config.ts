@@ -2,7 +2,7 @@ import type { GatsbyConfig } from 'gatsby'
 
 const config: GatsbyConfig = {
     siteMetadata: {
-        title: `Focus - Build Better Software`,
+        title: `Focus - Impactful Digital Services`,
         siteUrl: `https://focusconsulting.io`,
         description:
             'We help government and industry partners build human-centered, high value, and highly maintainable digital services at scale.',
