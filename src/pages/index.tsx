@@ -139,19 +139,12 @@ const IndexPage: React.FC<PageProps> = () => {
                         fontWeight={700}
                         lineHeight={'120%'}
                         mb="6"
-                        _after={{
-                            content: 'url("/images/index/homepage-swish.svg")',
-                            pos: 'relative',
-                            top: '-25px',
-                            left: '110px',
-                            hideBelow: 'md',
-                        }}
                     >
                         {content.sectionHero.title}
                     </Heading>
                 }
                 subHeading={content.sectionHero.subHeading}
-                image={<Image src="/images/index/homepage-image.png"></Image>}
+                image={<Image src="/images/index/homepage-ux-collab.png"></Image>}
                 cta={
                     <Button
                         as={Link}

@@ -77,28 +77,9 @@ const projects = [
         description: [
             'PFML was a new legislatively mandated state project that kicked off in January 2020 to provide Massachusetts residents the ability to apply for and receive payment for family and medical leave. Focus was part of the initial core team at project kickoff, and worked with our prime contracting partner (Nava PBC) and other stakeholders to staff project teams across product, engineering, DevOps and technical support.',
             'Our staff led delivery of various critical product and engineering milestones including the payments workflow, department of revenue data processing, approval workflow integration, and core API and cloud architecture. This work required coordination across numerous department agencies and vendor teams.',
+            'Since its launch in 2020, the program has paid over $1.3 billion in leave benefits.'
         ],
         link: 'https://paidleave.mass.gov/create-account',
-    },
-    {
-        title: 'Preventive Medicaid',
-        tags: ['Healthcare'],
-        description:
-            'Supporting a commercial partner providing preventive care for medicaid patients across various states. They work with insurance providers to identify and treat patients with preventable hospitalization risk. Focus provides agile software development services across various engineering and cloud infrastructure teams. We are currently supporting  implementation of the next iteration of their data pipeline platform and infrastructure. Focus engineers are also building the client application that allows care providers to effectively provide preventive care using various patient data.',
-    },
-    {
-        title: 'Healthcare for All',
-        tags: ['Equity', 'Healthcare'],
-        description:
-            'Our staff have experience in key engineering leadership roles HealthCare.gov and MyMedicare.gov projects. Currently supporting CMS cloud transformation projects.',
-        link: '',
-    },
-    {
-        title: 'DC Housing Insights',
-        tags: ['Equity'],
-        description:
-            'This open source tool provides housing advocates and government officials with insights on the state of affordable housing in Washington, DC. The project started as a Code for DC / CNHED / Greater DC initiative. The tool overlays multiple local and national data sources on top of an interactive map with various filter toggles to better visualize the data.',
-        link: 'http://housinginsights.org/#',
     },
     {
         title: 'CDC ReportStream',
@@ -114,6 +95,29 @@ const projects = [
             'Our staff works with stakeholders to update and improve the experience and workflow when applying for unemployment insurance in New Jersey.',
         link: 'https://nj.gov/labor/myunemployment/before/about/howtoapply/applyonline.shtml',
     },
+    {
+        title: 'Preventive Medicaid',
+        tags: ['Healthcare'],
+        description: [
+            'Supporting a commercial partner providing preventive care for medicaid patients across various states. Our client works with insurance providers to identify and treat patients with preventable hospitalization risk.',
+            'Focus provides agile software development services across various engineering and cloud infrastructure teams. We are currently supporting implementation of the next iteration of their data pipeline platform and infrastructure. Focus engineers are also building the client application that allows care providers to effectively provide preventive care using various patient data.'
+        ],
+        link: 'https://www.cityblock.com'
+    },
+    {
+        title: 'Healthcare for All',
+        tags: ['Healthcare', 'Equity'],
+        description:
+            'Our staff have experience in key engineering leadership roles on HealthCare.gov (also known as ObamaCare) and MyMedicare.gov projects. Currently supporting CMS cloud transformation projects.',
+        link: 'https://www.healthcare.gov/',
+    },
+    {
+        title: 'DC Housing Insights',
+        tags: ['Equity'],
+        description:
+            'This open source tool provides housing advocates and government officials with insights on the state of affordable housing in Washington, DC. The project started as a Code for DC / CNHED / Greater DC initiative. The tool overlays multiple local and national data sources on top of an interactive map with various filter toggles to better visualize the data.',
+        link: 'http://housinginsights.org/#',
+    },    
     {
         title: 'Marriott Learning Platform',
         tags: ['Learning & Development'],

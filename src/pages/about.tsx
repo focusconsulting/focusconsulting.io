@@ -117,7 +117,7 @@ const team = [
     {
         name: 'Ant Addis',
         title: 'CEO',
-        photo: '/images/staff/anteneh-3.webp',
+        photo: '/images/staff/anteneh-avatar-new-sm.png',
         department: 'leadership',
     },
     {
