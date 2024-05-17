@@ -77,7 +77,7 @@ const projects = [
         description: [
             'PFML was a new legislatively mandated state project that kicked off in January 2020 to provide Massachusetts residents the ability to apply for and receive payment for family and medical leave. Focus was part of the initial core team at project kickoff, and worked with our prime contracting partner (Nava PBC) and other stakeholders to staff project teams across product, engineering, DevOps and technical support.',
             'Our staff led delivery of various critical product and engineering milestones including the payments workflow, department of revenue data processing, approval workflow integration, and core API and cloud architecture. This work required coordination across numerous department agencies and vendor teams.',
-            'Since its launch in 2020, the program has paid over $1.3 billion in leave benefits.'
+            'Since its launch in 2021, the program has paid over $1.3 billion in leave benefits.'
         ],
         link: 'https://paidleave.mass.gov/create-account',
     },
