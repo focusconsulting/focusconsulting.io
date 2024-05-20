@@ -3,7 +3,7 @@ import React, { ReactNode } from 'react'
 
 type HeroProps = {
     heading: ReactNode
-    subHeading: String
+    subHeading: String | ReactNode
     image?: ReactNode
     cta?: ReactNode
 }

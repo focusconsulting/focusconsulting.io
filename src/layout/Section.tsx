@@ -9,6 +9,8 @@ import {
   Text,
   useBreakpointValue,
   useColorModeValue,
+  UnorderedList,
+  ListItem,
 } from '@chakra-ui/react'
 import * as React from 'react'
 import { FiMenu } from 'react-icons/fi'
@@ -17,7 +19,7 @@ import { Icon } from '@chakra-ui/react'
 interface MainProps {
   title: string,
   description?: string,
-  items?: { title: string, description: string, icon? : any, iconColor?: string }[], 
+  items?: { title: string, description?: string | string[], bulletPoints?: string[], icon? : any, iconColor?: string }[], 
   backgroundColor?: string,
   fontColor?: string,
   anchor?: string,
@@ -51,7 +53,12 @@ const Section = ({ title, description, items, backgroundColor, fontColor, anchor
             </Stack>
           ) : (
             <Text fontSize="xl">{value.description}</Text>
-          )}          
+          )}
+          {value.bulletPoints && (
+            <UnorderedList fontSize="xl">
+              {value.bulletPoints.map(bulletPoint => <ListItem>{bulletPoint}</ListItem>)}
+            </UnorderedList>
+          )}                   
         </Box>      
       );
     });
