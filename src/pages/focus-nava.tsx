@@ -132,7 +132,7 @@ const FocusNavaJVPage: React.FC<PageProps> = () => {
           <Text fontSize="2xl">Focus Nava JV I LLC</Text> 
           <Text fontSize="xl">1015 15th St NW, Suite 600</Text>
           <Text fontSize="xl" mb={5}>Washington DC, 20005</Text>
-          <Text fontSize="xl" fontWeight="semibold">focus.nava@focusconsulting.io</Text>
+          <Text fontSize="xl" fontWeight="semibold">contracts@focus-digital.io</Text>
         </Container>               
       </Box>
     </Box>
