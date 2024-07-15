@@ -1,4 +1,4 @@
-import { Box, Container, Heading, Text, Link as ChakraLink, Button, SimpleGrid } from "@chakra-ui/react";
+import { Box, Container, Heading, Text, Link as ChakraLink, Button, SimpleGrid, Image } from "@chakra-ui/react";
 import { HeadFC, Link, PageProps } from 'gatsby'
 import { SEO } from '../components/seo'
 import React from "react";
@@ -13,24 +13,24 @@ const sections = [
     backgroundColor: 'white',
     items: [
         {
+          title: 'A Focus on Program Outcomes',
+          description:
+              'We define clear success metrics to measure success of priority program goals. We proactively identify and mitigate risks throughout the agile development process, so you know we’ll build the right thing, on time and on budget.',
+        },
+        {
             title: 'Human-Centered Design',
             description:
-                'Our jobs involve taking complicated topics and working to remove the ambiguity; our clients rely on us to work and communicate honestly and efficiently.',
+                'We take our responsibility of building accessible government services for all users seriously. We center our work on human-centered design and research to gain deep insights into user needs and challenges.',
         },
         {
             title: 'Policy Integrated Delivery',
             description:
-                "We always come prepared, researching and documenting before raising topics with our clients.  We respect our clients' time by asking questions that get to the root of things faster. ",
-        },
-        {
-            title: 'Data Driven Insights',
-            description:
-                'Our reputation with our clients is critical to our success as a business and that reputation is built by consistently delivering on what we promise to do.',
-        },
+                "Our work involves translating complex government policy into user-friendly services. We partner with stakeholders and experts to integrate policy expertise with technical considerations for better program outcomes.",
+        },        
         {
             title: 'The Right Technology Tools',
             description:
-                'The industry is constantly evolving, and in order to stay relevant we constantly grow our skill sets to serve current and future clients.',
+                'We leverage our extensive technology delivery experience to select the best technology tools for the job at hand. This means using mature, well-tested, and preferably open source tools, allowing our teams to focus on program specific workflows sooner.',
         },
     ],
   },
@@ -65,7 +65,7 @@ const sections = [
               'DUNS #: 119264428'
             ]
         },
-    ],
+    ],  
   },
 ]
 
@@ -74,7 +74,8 @@ const FocusNavaJVPage: React.FC<PageProps> = () => {
     <Box>
       <Box py={5}>
         <Container minW={['container.xs', 'container.xl']} justifyContent="flex-start">
-          <Heading size="xl">Focus Nava JV</Heading>
+          {/* <Heading size="xl">Focus Nava JV</Heading> */}
+          <Image height={{ base: '35px', md: '50px' }} src="/images/index/focus-nava-logo.png" />
         </Container>
       </Box>      
       <Box>
@@ -97,10 +98,11 @@ const FocusNavaJVPage: React.FC<PageProps> = () => {
           cta={
             <Button
                 as={ChakraLink}
-                href=""
+                href="https://drive.google.com/file/d/1eOEd1TeQ-hyGi_5xa_AHj9SXemTcld2k/view?usp=sharing"
                 backgroundColor={'primary'}
                 color={'white'}
-                leftIcon={<FaDownload />}
+                rightIcon={<FaDownload />}
+                isExternal
             >
               Capability Statement
             </Button>
@@ -127,12 +129,12 @@ const FocusNavaJVPage: React.FC<PageProps> = () => {
             spacing="10"
           >
             {renderAvatar('Ant Addis', 'President', '/images/staff/anteneh-avatar-new-sm.png', 'https://www.linkedin.com/in/ant-addis')}
-            {renderAvatar('Rohan Bhobe', 'Partner', '/images/staff/anteneh-avatar-new-sm.png', 'https://www.linkedin.com/in/ant-addis')}
+            {renderAvatar('Rohan Bhobe', 'Partner', '/images/staff/rohan-avatar.jpeg', 'https://www.linkedin.com/in/rbhobe')}
           </SimpleGrid>
           <Text fontSize="2xl">Focus Nava JV I LLC</Text> 
           <Text fontSize="xl">1015 15th St NW, Suite 600</Text>
-          <Text fontSize="xl" mb={5}>Washington DC, 20005</Text>
-          <Text fontSize="xl" fontWeight="semibold">contracts@focus-digital.io</Text>
+          <Text fontSize="xl" mb={5}>Washington DC, 20005</Text>          
+          <Text fontSize="xl" fontWeight="semibold">jv@focus-digital.io</Text>
         </Container>               
       </Box>
     </Box>
@@ -141,4 +143,4 @@ const FocusNavaJVPage: React.FC<PageProps> = () => {
 
 export default FocusNavaJVPage;
 
-export const Head: HeadFC = () => <SEO title="Focus Nava JV - Digital Services" />
+export const Head: HeadFC = () => <SEO title="Focus Nava JV - Impactful Government Digital Services" />

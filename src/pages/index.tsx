@@ -50,61 +50,46 @@ const content = {
     sectionHero: {
         title: "Impactful Digital Services",
         subHeading:
-            'We build human-centered and high value digital services that scale.',
+            'We build human-centered and high value government digital services that scale.',
         cta: 'Find out how',
     },
     sectionWhoWeWorkWith: {
         title: 'Who we work with',
     },
     sectionServices: {
-        title: 'Delivering impact for government and industry',
+        title: 'A Focus on Program Outcomes',
         subHeading:
-            'We work with our partners to provide a variety of services to deliver impactful outcomes.',
+            'We never lose sight of program outcomes for our agency partners and their users.',
         services: [
             {
-                title: 'Design & Research',
+                title: 'Human-Centered Design',
                 description:
-                    'We center our work on human-centered design and research to gain deep insights into user challenges and needs.',
+                    'We take our responsibility of building accessible government services for all users seriously. We center our work on human-centered design and research to gain deep insights into user needs and challenges.',
                 logo: <FaLightbulb color="white" size={'24px'} />,
             },
             {
-                title: 'Engineering',
+                title: 'Policy Integrated Delivery',
                 description:
-                    'We bring deep expertise in full-stack web development using agile development processes. ',
-                logo: <FaCode color="white" size={'24px'} />,
-            },
-            {
-                title: 'Agile Delivery',
-                description:
-                    'We bring deep expertise in full-stack web development using agile development process.',
-                logo: <FaProjectDiagram color="white" size={'24px'} />,
-            },
-            {
-                title: 'Product Management',
-                description:
-                    'Our product managers work with their design and research colleagues to understand customer needs, work with our stakeholders, and craft high value solutions.',
-                logo: <FaBolt color="white" size={'24px'} />,
-            },
-            {
-                title: 'DevOps & Cloud Infrastructure',
-                description:
-                    'We develop and improve robust CI/CD processes that free up developers to focus on providing user value, accessibility, and privacy.',
-                logo: <FaLayerGroup color="white" size={'24px'} />,
-            },
-            {
-                title: 'Subject Matter Expert',
-                description:
-                    'Our projects span work that addresses equity, healthcare, benefits, and learning across government and commercial clients.',
+                    'Our work involves translating complex government policy into user-friendly services. We partner with stakeholders and experts to integrate policy expertise with technical considerations for better program outcomes.',
                 logo: <FaBrain color="white" size={'24px'} />,
             },
+            {
+                title: 'The Right Technology Tools',
+                description:
+                    'We leverage our extensive technology delivery experience to select the best technology tools for the job at hand. This means using mature, well-tested, and preferably open source tools, allowing our teams to focus on program specific workflows sooner.',
+                logo: <FaCode color="white" size={'24px'} />,
+            }
         ],
     },
     sectionAbout: {
-        title: 'Minority-owned digital service',
+        title: 'Diverse Perspectives',
         subHeading:
-            ' We are a minority-owned software digital services company focused on bringing about social impact.',
+            'As a minority-owned company, we are committed to bringing diverse backgrounds and experiences to government digital services.',
         sba: "We're Small Business Administration (SBA) 8(a) Certified.",
-        dccbe: "We're based in DC and certified as a Small Business Enterprise.",
+        dccbe: "We're based in DC and certified as a Small Business Enterprise (SBE) and Disadvantaged Business Enterprise (DBE).",
+        mambe: 'Massachusets and Boston Minority Business Enterprise (MBE) certified.',
+        mdmbe: 'Maryland SBE and DBE certified.',
+        vtdbe: 'Vermont DBE certified.',
         dsc: (
             <>
                 Part of the{' '}
@@ -116,9 +101,9 @@ const content = {
                     Digital Services Coalition
                 </ChakraLink>
                 , a collection of agile technology and design firms that
-                serve—or aspire to serve—the government
+                serve the government
             </>
-        ),
+        ),        
     },
     sectionContactUs: {
         title: 'Have any questions?',
@@ -213,6 +198,7 @@ const IndexPage: React.FC<PageProps> = () => {
                                 fontWeight={400}
                                 lineHeight={'28px'}
                                 fontSize={'18px'}
+                                align="center"
                             >
                                 {content.sectionServices.subHeading}
                             </Text>
@@ -224,6 +210,7 @@ const IndexPage: React.FC<PageProps> = () => {
                             columns={[1, 3]}
                             spacing={10}
                             margin={'auto'}
+                            mb={50}
                         >
                             {content.sectionServices.services.map((service) => (
                                 <Card p="8">
@@ -253,7 +240,35 @@ const IndexPage: React.FC<PageProps> = () => {
                                     </CardBody>
                                 </Card>
                             ))}
-                        </SimpleGrid>
+                        </SimpleGrid>                        
+
+                        <Stack
+                            justify="center"
+                            px={['0', '11']}
+                            spacing="5"
+                            margin={'auto'}
+                            direction={{ base: 'column', md: 'row' }}>
+                            <Button
+                                variant="solid"
+                                fontSize={{ base: '2xl', md: '2xl' }}
+                                size="lg"
+                                colorScheme="blue"
+                                as={Link}
+                                to="/services"
+                            >
+                                Services & Expertise
+                            </Button>
+                            <Button
+                                variant="solid"
+                                size="lg"
+                                fontSize={{ base: '2xl', md: '2xl' }}
+                                colorScheme="blue"
+                                as={Link}
+                                to="/our-work"
+                            >
+                                Examples of Our Work
+                            </Button>
+                        </Stack>
                     </Box>
                 </Box>
             </Box>
@@ -337,6 +352,72 @@ const IndexPage: React.FC<PageProps> = () => {
                                     lineHeight={'150%'}
                                 >
                                     {content.sectionAbout.dccbe}
+                                </Text>
+                            </Box>
+                        </Stack>
+                        <Stack
+                            direction={['column', 'row']}
+                            spacing={16}
+                            align={'start'}
+                            mb="8"
+                        >
+                            <Box minW="200px">
+                                <Image
+                                    w="100px"
+                                    src="images/index/ma-sdo-logo.png"
+                                />
+                            </Box>
+                            <Box>
+                                <Text
+                                    fontSize={'18px'}
+                                    fontWeight={400}
+                                    lineHeight={'150%'}
+                                >
+                                    {content.sectionAbout.mambe}
+                                </Text>
+                            </Box>
+                        </Stack>
+                        <Stack
+                            direction={['column', 'row']}
+                            spacing={16}
+                            align={'start'}
+                            mb="8"
+                        >
+                            <Box minW="200px">
+                                <Image
+                                    w="100px"
+                                    src="images/index/md-dot-logo.png"
+                                />
+                            </Box>
+                            <Box>
+                                <Text
+                                    fontSize={'18px'}
+                                    fontWeight={400}
+                                    lineHeight={'150%'}
+                                >
+                                    {content.sectionAbout.mdmbe}
+                                </Text>
+                            </Box>
+                        </Stack>
+                        <Stack
+                            direction={['column', 'row']}
+                            spacing={16}
+                            align={'start'}
+                            mb="8"
+                        >
+                            <Box minW="200px">
+                                <Image
+                                    w="100px"
+                                    src="images/index/vt-logo.png"
+                                />
+                            </Box>
+                            <Box>
+                                <Text
+                                    fontSize={'18px'}
+                                    fontWeight={400}
+                                    lineHeight={'150%'}
+                                >
+                                    {content.sectionAbout.vtdbe}
                                 </Text>
                             </Box>
                         </Stack>

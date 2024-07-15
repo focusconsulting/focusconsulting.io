@@ -2,17 +2,18 @@ import * as React from 'react'
 
 import {
     Box,
+    Button,
     HStack,
     Heading,
     Icon,
     IconButton,
-    Link,
+    Link as ExternalLink,
     Stack,
     Tag,
     Text,
 } from '@chakra-ui/react'
 import { FaEquals, FaExternalLinkAlt } from 'react-icons/fa'
-import { HeadFC, PageProps } from 'gatsby'
+import { HeadFC, Link, PageProps } from 'gatsby'
 import {
     MdBabyChangingStation,
     MdLocalHospital,
@@ -24,42 +25,45 @@ import Layout from '../layout/Layout'
 import { SEO } from '../components/seo'
 import Section from '../layout/Section'
 
+export const focusAreas = {
+    title: 'Focus on Social Impact',
+    description: 'Our areas of focus reflect our values and expertise.',
+    items: [
+        {
+            title: 'Equity',
+            description:
+                'Enabling access to under-served and disadvantaged communities.',
+            icon: FaEquals,
+        },
+        {
+            title: 'Integrated Benefits',
+            description:
+                'Using digital services to make existing benefits services faster and more accessible.',
+            icon: MdBabyChangingStation,
+        },
+        {
+            title: 'Healthcare',
+            description:
+                'Addressing the vast US healthcare space through federal, local and commercial projects.',
+            icon: MdLocalHospital,
+        },
+        {
+            title: 'Learning & Development',
+            description:
+                'Emphasis on projects that enable upward mobility in under-served communities.',
+            icon: MdOutlineSchool,
+        },
+    ],
+    backgroundColor: 'white',
+    customId: 'focus-areas'
+};
+
 const content = {
     heroTitle: 'Our Work',
     heroDescription:
         'We focus on projects with social impact. Success means people with better health, increased access to benefits to underserved communities, and better upskilling and job opportunities for disadvantaged communities.',
     sections: [
-        {
-            title: 'Focus on Social Impact',
-            description: 'Our areas of focus reflect our values and expertise.',
-            items: [
-                {
-                    title: 'Equity',
-                    description:
-                        'Enabling access to under-served and disadvantaged communities.',
-                    icon: FaEquals,
-                },
-                {
-                    title: 'Integrated Benefits',
-                    description:
-                        'Using digital services to make existing benefits services faster and more accessible.',
-                    icon: MdBabyChangingStation,
-                },
-                {
-                    title: 'Healthcare',
-                    description:
-                        'Addressing the vast US healthcare space through federal, local and commercial projects.',
-                    icon: MdLocalHospital,
-                },
-                {
-                    title: 'Learning & Development',
-                    description:
-                        'Emphasis on projects that enable upward mobility in under-served communities.',
-                    icon: MdOutlineSchool,
-                },
-            ],
-            backgroundColor: 'white',
-        },
+        focusAreas,
         {
             title: 'Projects',
             description:
@@ -85,7 +89,7 @@ const projects = [
         title: 'CDC ReportStream',
         tags: ['Healthcare'],
         description:
-            'ReportStream is an open source, cloud based platform that aggregates and delivers reportable disease test results to health departments.',
+            'As part of the pandemic response, the CDC was tasked with improving how Covid test results were reported and delivered to public health agencies. A key part of that effort was the ReportStream tool, which was responsible for receiving, routing and delivering Covid test results. Since then, we’ve worked alongside our partners to augment the application to support sending and receiving any kind of test results or test orders as well as delivering this data in a wide variety of health specifications including HL7 and FHIR.',
         link: 'https://reportstream.cdc.gov/',
     },
     {
@@ -143,52 +147,72 @@ const tagToColor: any = {
 
 const AboutPage: React.FC<PageProps> = () => {
     const customRenderMap: any = {
-        projects: () => {
-            return projects.map((project) => {
-                return (
-                    <Box mb={{ base: 8, md: 12 }}>
-                        <HStack spacing="3">
-                            {project.tags.map((tag) => (
-                                <Tag
-                                    variant="subtle"
-                                    colorScheme={tagToColor[tag]}
-                                >
-                                    {tag}
-                                </Tag>
-                            ))}
-                        </HStack>
-                        <Heading
-                            fontSize={{ base: '3xl', md: '4xl' }}
-                            fontWeight="extrabold"
-                            mb={{ base: 1, md: 2 }}
-                        >
-                            {project.title}{' '}
-                            {project.link && (
-                                <IconButton
-                                    aria-label="See link"
-                                    icon={<Icon as={FaExternalLinkAlt} />}
-                                    as={Link}
-                                    isExternal
-                                    href={project.link}
-                                    variant="link"
-                                />
-                            )}
-                        </Heading>
-                        {Array.isArray(project.description) ? (
-                            <Stack
-                                direction="column"
-                                spacing={{ base: 6, md: 6 }}
-                            >
-                                {project.description.map((paragraph) => (
-                                    <Text fontSize="xl">{paragraph}</Text>
-                                ))}
-                            </Stack>
-                        ) : (
-                            <Text fontSize="xl">{project.description}</Text>
-                        )}
+        projects: () => {            
+            return (
+                <Box>
+                    <Box>
+                    {
+                        projects.map((project) => {
+                            return (
+                                <Box mb={{ base: 8, md: 12 }}>
+                                    <HStack spacing="3">
+                                        {project.tags.map((tag) => (
+                                            <Tag
+                                                variant="subtle"
+                                                colorScheme={tagToColor[tag]}
+                                            >
+                                                {tag}
+                                            </Tag>
+                                        ))}
+                                    </HStack>
+                                    <Heading
+                                        fontSize={{ base: '3xl', md: '4xl' }}
+                                        fontWeight="extrabold"
+                                        mb={{ base: 1, md: 2 }}
+                                    >
+                                        {project.title}{' '}
+                                        {project.link && (
+                                            <IconButton
+                                                aria-label="See link"
+                                                icon={<Icon as={FaExternalLinkAlt} />}
+                                                as={ExternalLink}
+                                                isExternal
+                                                href={project.link}
+                                                variant="link"
+                                            />
+                                        )}
+                                    </Heading>
+                                    {Array.isArray(project.description) ? (
+                                        <Stack
+                                            direction="column"
+                                            spacing={{ base: 6, md: 6 }}
+                                        >
+                                            {project.description.map((paragraph) => (
+                                                <Text fontSize="xl">{paragraph}</Text>
+                                            ))}
+                                        </Stack>
+                                    ) : (
+                                        <Text fontSize="xl">{project.description}</Text>
+                                    )}
+                                </Box>
+                            )
+                        })
+                    }
                     </Box>
-                )
-            })
+                    <Box>
+                        <Button
+                            variant="solid"
+                            size="lg"
+                            fontSize={{ base: '2xl', md: '2xl' }}
+                            colorScheme="blue"
+                            as={Link}
+                            to="/services"
+                        >
+                            Services & Expertise
+                        </Button>
+                    </Box>
+                </Box>
+            )            
         },
     }
 

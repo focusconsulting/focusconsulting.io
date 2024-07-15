@@ -8,6 +8,8 @@ import {
     Heading,
     SimpleGrid,
     Text,
+    Link as ChakraLink,
+    Stack,
 } from '@chakra-ui/react'
 import { HeadFC, Link, PageProps } from 'gatsby'
 
@@ -15,6 +17,7 @@ import Hero2 from '../layout/Hero'
 import Layout from '../layout/Layout'
 import { SEO } from '../components/seo'
 import Section from '../layout/Section'
+import { focusAreas } from './our-work'
 
 const content = {
     heroTitle: 'About Us',
@@ -51,51 +54,15 @@ const content = {
                 {
                     title: 'Exhibit a growth mindset',
                     description:
-                        'The industry is constantly evolving, and in order to stay relevant we constantly grow our skill sets to serve current and future clients.',
+                        'The industry is constantly evolving, and in order to stay relevant we constantly grow our skill sets to serve current and future clients better.',
                 },
             ],
         },
-        {
-            title: 'Expertise',
-            items: [
-                {
-                    title: 'Software Engineering',
-                    description:
-                        'We bring deep expertise in full-stack web development using agile development processes. Our staff have successfully built and maintained high complexity applications serving millions of users.',
-                },
-                {
-                    title: 'Research & Design ',
-                    description:
-                        'We center our work on human-centered design and research to gain deep insights into user challenges and needs. We use user research and testing before and after feature launches to gain insights and make our work more valuable.',
-                },
-                {
-                    title: 'Data Engineering',
-                    description:
-                        'Our teams have strong experience processing, transforming, integrating, and synthesizing large volumes of diverse data sets. We have a depth of experience working with healthcare data across government, insurers, and hospitals.',
-                },
-                {
-                    title: 'Product Management',
-                    description:
-                        'Our product managers work with their design and research colleagues to understand customer needs, work with our stakeholders, and craft high value solutions. We make data-driven product decisions by defining and tracking success metrics within an agile development approach.',
-                },
-                {
-                    title: 'DevOps & Cloud Infrastructure',
-                    description:
-                        'We develop and improve robust CI/CD processes that free up developers to focus on providing user value, accessibility, and privacy. We work across the cloud ecosystem (AWS, Azure, Google Cloud). We use infrastructure as code approach to consistently define our cloud resources with automated deploys.',
-                },
-                {
-                    title: 'Project & Program Management',
-                    description:
-                        'Our project managers tie everything together by supporting our planning, stakeholder coordination, and delivery work. We use strong documentation and communication practices to work efficiently in an increasingly distributed world.',
-                },
-            ],
-            backgroundColor: 'white',
-            customId: 'expertise',
-            anchor: 'expertise',
-        },
+        focusAreas,
         {
             title: 'Core Team',
             description: 'Meet our diverse team of technologists.',
+            backgroundColor: 'gray.50',
             customId: 'team',
         },
     ],
@@ -118,6 +85,7 @@ const team = [
         name: 'Ant Addis',
         title: 'CEO',
         photo: '/images/staff/anteneh-avatar-new-sm.png',
+        link: 'https://www.linkedin.com/in/ant-addis',
         department: 'leadership',
     },
     {
@@ -142,6 +110,7 @@ const team = [
         name: 'Michael Kalish',
         title: 'CTO',
         photo: '/images/staff/kalish-profile.webp',
+        link: 'https://www.linkedin.com/in/mqkalish',
         department: 'leadership',
     },
     {
@@ -207,6 +176,12 @@ const team = [
         photo: '/images/staff/tshering-yudon.webp',
         department: 'product',
     },
+    {
+        name: 'Upendra Jejjala',
+        title: 'Product Manager',
+        photo: '/images/staff/upendra-avatar.jpg',
+        department: 'product',
+    }
 ]
 
 const AboutPage: React.FC<PageProps> = () => {
@@ -214,17 +189,18 @@ const AboutPage: React.FC<PageProps> = () => {
         team: () => {
             return (
                 <>
+                {['leadership', 'product', 'engineering', 'support'].map((dept: string) => (
                     <Box marginBottom="5">
-                        <Heading marginBottom="10">Leadership</Heading>
+                        <Heading marginBottom="10">{dept.charAt(0).toUpperCase() + dept.slice(1)}</Heading>
                         <SimpleGrid
                             columns={{ base: 2, md: 4 }}
                             mb={{ base: 12, md: 12 }}
                             spacing="10"
-                        >
+                        >                            
                             {team
                                 .filter(
                                     (person) =>
-                                        person.department == 'leadership'
+                                        person.department == dept
                                 )
                                 .map((person) => {
                                     return (
@@ -235,16 +211,34 @@ const AboutPage: React.FC<PageProps> = () => {
                                                 mb={2}
                                                 src={person.photo}
                                             />
-                                            <Text
-                                                fontSize={{
-                                                    base: 'xl',
-                                                    md: '2xl',
-                                                }}
-                                                fontWeight="semibold"
-                                                mb={1}
-                                            >
-                                                {person.name}
-                                            </Text>
+                                            {person.link ? (
+                                                <Box>
+                                                <ChakraLink
+                                                    isExternal
+                                                    textDecor={'underline'}
+                                                    href={person.link}
+                                                    fontSize={{
+                                                        base: 'xl',
+                                                        md: '2xl',
+                                                    }}
+                                                    fontWeight="semibold"
+                                                    mb={1}
+                                                >
+                                                    {person.name}
+                                                </ChakraLink>
+                                                </Box>
+                                            ) : (
+                                                <Text
+                                                    fontSize={{
+                                                        base: 'xl',
+                                                        md: '2xl',
+                                                    }}
+                                                    fontWeight="semibold"
+                                                    mb={1}
+                                                >
+                                                    {person.name}
+                                                </Text>
+                                            )}                                            
                                             <Text
                                                 fontSize={{
                                                     base: 'lg',
@@ -259,163 +253,39 @@ const AboutPage: React.FC<PageProps> = () => {
                         </SimpleGrid>
                         <Divider />
                     </Box>
-                    <Box marginBottom="5">
-                        <Heading marginBottom="10">Product</Heading>
-                        <SimpleGrid
-                            columns={{ base: 2, md: 4 }}
-                            mb={{ base: 12, md: 12 }}
-                            spacing="10"
-                        >
-                            {team
-                                .filter(
-                                    (person) => person.department == 'product'
-                                )
-                                .sort((a, b) => a.name.localeCompare(b.name))
-                                .map((person) => {
-                                    return (
-                                        <Box>
-                                            <Avatar
-                                                name={person.name}
-                                                size={{ base: 'xl', md: '2xl' }}
-                                                mb={2}
-                                                src={person.photo}
-                                            />
-                                            <Text
-                                                fontSize={{
-                                                    base: 'xl',
-                                                    md: '2xl',
-                                                }}
-                                                fontWeight="semibold"
-                                                mb={1}
-                                            >
-                                                {person.name}
-                                            </Text>
-                                            <Text
-                                                fontSize={{
-                                                    base: 'lg',
-                                                    md: 'xl',
-                                                }}
-                                            >
-                                                {person.title}
-                                            </Text>
-                                        </Box>
-                                    )
-                                })}
-                        </SimpleGrid>
-                        <Divider />
-                    </Box>
-                    <Box marginBottom="5">
-                        <Heading marginBottom="10">Engineering</Heading>
-                        <SimpleGrid
-                            columns={{ base: 2, md: 4 }}
-                            mb={{ base: 12, md: 12 }}
-                            spacing="10"
-                        >
-                            {team
-                                .filter(
-                                    (person) =>
-                                        person.department == 'engineering'
-                                )
-                                .sort((a, b) => a.name.localeCompare(b.name))
-                                .map((person) => {
-                                    return (
-                                        <Box>
-                                            <Avatar
-                                                name={person.name}
-                                                size={{ base: 'xl', md: '2xl' }}
-                                                mb={2}
-                                                src={person.photo}
-                                            />
-                                            <Text
-                                                fontSize={{
-                                                    base: 'xl',
-                                                    md: '2xl',
-                                                }}
-                                                fontWeight="semibold"
-                                                mb={1}
-                                            >
-                                                {person.name}
-                                            </Text>
-                                            <Text
-                                                fontSize={{
-                                                    base: 'lg',
-                                                    md: 'xl',
-                                                }}
-                                            >
-                                                {person.title}
-                                            </Text>
-                                        </Box>
-                                    )
-                                })}
-                        </SimpleGrid>
-                        <Divider />
-                    </Box>
-                    <Box>
-                        <Heading marginBottom="10">Support</Heading>
-                        <SimpleGrid
-                            columns={{ base: 2, md: 4 }}
-                            mb={{ base: 12, md: 12 }}
-                            spacing="10"
-                        >
-                            {team
-                                .filter(
-                                    (person) => person.department == 'support'
-                                )
-                                .map((person) => {
-                                    return (
-                                        <Box>
-                                            <Avatar
-                                                name={person.name}
-                                                size={{ base: 'xl', md: '2xl' }}
-                                                mb={2}
-                                                src={person.photo}
-                                            />
-                                            <Text
-                                                fontSize={{
-                                                    base: 'xl',
-                                                    md: '2xl',
-                                                }}
-                                                fontWeight="semibold"
-                                                mb={1}
-                                            >
-                                                {person.name}
-                                            </Text>
-                                            <Text
-                                                fontSize={{
-                                                    base: 'lg',
-                                                    md: 'xl',
-                                                }}
-                                            >
-                                                {person.title}
-                                            </Text>
-                                        </Box>
-                                    )
-                                })}
-                        </SimpleGrid>
-                        <Button
-                            variant="solid"
-                            fontSize={{ base: '2xl', md: '2xl' }}
-                            colorScheme="blue"
-                            as={Link}
-                            to="/careers"
-                        >
-                            Join the Team
-                        </Button>
-                    </Box>
+                ))}
                 </>
             )
         },
-        expertise: () => {
+        'focus-areas': () => {
             return (
-                <Button
-                    variant="solid"
-                    fontSize={{ base: '2xl', md: '2xl' }}
-                    colorScheme="blue"
-                    as={Link}
-                    to="/our-work"
-                >
-                    See Examples of Our Work
-                </Button>
+                <Stack
+                    justify="center"
+                    px={['0', '11']}
+                    spacing="5"
+                    margin={'auto'}
+                    direction={{ base: 'column', md: 'row' }}>
+                    <Button
+                        variant="solid"
+                        fontSize={{ base: '2xl', md: '2xl' }}
+                        size="lg"
+                        colorScheme="blue"
+                        as={Link}
+                        to="/services"
+                    >
+                        Services & Expertise
+                    </Button>
+                    <Button
+                        variant="solid"
+                        size="lg"
+                        fontSize={{ base: '2xl', md: '2xl' }}
+                        colorScheme="blue"
+                        as={Link}
+                        to="/our-work"
+                    >
+                        Examples of Our Work
+                    </Button>
+                </Stack>
             )
         },
     }

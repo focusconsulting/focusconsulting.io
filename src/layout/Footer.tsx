@@ -46,8 +46,8 @@ const content = {
         },
     ],
     businessName: 'Focus Consulting, LLC',
-    businessAddress1: '716 Roxboro Pl NW',
-    businessAddress2: 'Washington, DC 20011',
+    businessAddress1: '1015 15th St NW, Suite 600',
+    businessAddress2: 'Washington, DC 20005',
     copyright: 'Focus Consulting, LLC. All rights reserved.',
 }
 
@@ -123,7 +123,7 @@ const Footer = () => {
                     <Text>{content.businessAddress1}</Text>
                     <Text>{content.businessAddress2}</Text>
                 </Box>
-                <Text>2023 Focus Consulting, LLC. All rights reserved</Text>
+                <Text>2024 Focus Consulting, LLC. All rights reserved</Text>
             </Stack>
         </Box>
     )
