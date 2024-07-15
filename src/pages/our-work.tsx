@@ -3,11 +3,11 @@ import * as React from 'react'
 import {
     Box,
     Button,
+    Link as ExternalLink,
     HStack,
     Heading,
     Icon,
     IconButton,
-    Link as ExternalLink,
     Stack,
     Tag,
     Text,
@@ -55,8 +55,8 @@ export const focusAreas = {
         },
     ],
     backgroundColor: 'white',
-    customId: 'focus-areas'
-};
+    customId: 'focus-areas',
+}
 
 const content = {
     heroTitle: 'Our Work',
@@ -81,7 +81,7 @@ const projects = [
         description: [
             'PFML was a new legislatively mandated state project that kicked off in January 2020 to provide Massachusetts residents the ability to apply for and receive payment for family and medical leave. Focus was part of the initial core team at project kickoff, and worked with our prime contracting partner (Nava PBC) and other stakeholders to staff project teams across product, engineering, DevOps and technical support.',
             'Our staff led delivery of various critical product and engineering milestones including the payments workflow, department of revenue data processing, approval workflow integration, and core API and cloud architecture. This work required coordination across numerous department agencies and vendor teams.',
-            'Since its launch in 2021, the program has paid over $1.3 billion in leave benefits.'
+            'Since its launch in 2021, the program has paid over $1.3 billion in leave benefits.',
         ],
         link: 'https://paidleave.mass.gov/create-account',
     },
@@ -104,9 +104,9 @@ const projects = [
         tags: ['Healthcare'],
         description: [
             'Supporting a commercial partner providing preventive care for medicaid patients across various states. Our client works with insurance providers to identify and treat patients with preventable hospitalization risk.',
-            'Focus provides agile software development services across various engineering and cloud infrastructure teams. We are currently supporting implementation of the next iteration of their data pipeline platform and infrastructure. Focus engineers are also building the client application that allows care providers to effectively provide preventive care using various patient data.'
+            'Focus provides agile software development services across various engineering and cloud infrastructure teams. We are currently supporting implementation of the next iteration of their data pipeline platform and infrastructure. Focus engineers are also building the client application that allows care providers to effectively provide preventive care using various patient data.',
         ],
-        link: 'https://www.cityblock.com'
+        link: 'https://www.cityblock.com',
     },
     {
         title: 'Healthcare for All',
@@ -121,7 +121,7 @@ const projects = [
         description:
             'This open source tool provides housing advocates and government officials with insights on the state of affordable housing in Washington, DC. The project started as a Code for DC / CNHED / Greater DC initiative. The tool overlays multiple local and national data sources on top of an interactive map with various filter toggles to better visualize the data.',
         link: 'http://housinginsights.org/#',
-    },    
+    },
     {
         title: 'Marriott Learning Platform',
         tags: ['Learning & Development'],
@@ -147,12 +147,11 @@ const tagToColor: any = {
 
 const AboutPage: React.FC<PageProps> = () => {
     const customRenderMap: any = {
-        projects: () => {            
+        projects: () => {
             return (
                 <Box>
                     <Box>
-                    {
-                        projects.map((project) => {
+                        {projects.map((project) => {
                             return (
                                 <Box mb={{ base: 8, md: 12 }}>
                                     <HStack spacing="3">
@@ -174,7 +173,11 @@ const AboutPage: React.FC<PageProps> = () => {
                                         {project.link && (
                                             <IconButton
                                                 aria-label="See link"
-                                                icon={<Icon as={FaExternalLinkAlt} />}
+                                                icon={
+                                                    <Icon
+                                                        as={FaExternalLinkAlt}
+                                                    />
+                                                }
                                                 as={ExternalLink}
                                                 isExternal
                                                 href={project.link}
@@ -187,17 +190,22 @@ const AboutPage: React.FC<PageProps> = () => {
                                             direction="column"
                                             spacing={{ base: 6, md: 6 }}
                                         >
-                                            {project.description.map((paragraph) => (
-                                                <Text fontSize="xl">{paragraph}</Text>
-                                            ))}
+                                            {project.description.map(
+                                                (paragraph) => (
+                                                    <Text fontSize="xl">
+                                                        {paragraph}
+                                                    </Text>
+                                                )
+                                            )}
                                         </Stack>
                                     ) : (
-                                        <Text fontSize="xl">{project.description}</Text>
+                                        <Text fontSize="xl">
+                                            {project.description}
+                                        </Text>
                                     )}
                                 </Box>
                             )
-                        })
-                    }
+                        })}
                     </Box>
                     <Box>
                         <Button
@@ -212,7 +220,7 @@ const AboutPage: React.FC<PageProps> = () => {
                         </Button>
                     </Box>
                 </Box>
-            )            
+            )
         },
     }
 
@@ -242,6 +250,7 @@ const AboutPage: React.FC<PageProps> = () => {
                         items={section.items}
                     >
                         {section.customId &&
+                            customRenderMap[section.customId] &&
                             customRenderMap[section.customId]()}
                     </Section>
                 )
