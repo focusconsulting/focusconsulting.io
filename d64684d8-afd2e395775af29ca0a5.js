@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkfocus_consulting=self.webpackChunkfocus_consulting||[]).push([[556],{3854:function(n,t,r){r.d(t,{vrJ:function(){return o}});var e=r(4405);function o(n){return(0,e.w_)({tag:"svg",attr:{fill:"none",viewBox:"0 0 24 24",strokeWidth:"2",stroke:"currentColor","aria-hidden":"true"},child:[{tag:"path",attr:{strokeLinecap:"round",strokeLinejoin:"round",d:"M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"}}]})(n)}}}]);
+//# sourceMappingURL=d64684d8-afd2e395775af29ca0a5.js.map
