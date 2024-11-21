@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkfocus_consulting=self.webpackChunkfocus_consulting||[]).push([[969],{173:function(e,t,c){c.r(t);var s=c(9583),n=c(5019),l=c(7294),u=c(1883);t.default=()=>l.createElement(n.Z,null,l.createElement("div",{id:"ashby_embed",style:{minHeight:"55vh"}},l.createElement(s.fCD,null)),l.createElement(u.Script,{src:"https://jobs.ashbyhq.com/focus/embed"}))}}]);
+//# sourceMappingURL=component---src-pages-careers-tsx-f0d875d8ad09b919ecd2.js.map
