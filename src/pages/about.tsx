@@ -4,12 +4,12 @@ import {
     Avatar,
     Box,
     Button,
+    Link as ChakraLink,
     Divider,
     Heading,
     SimpleGrid,
-    Text,
-    Link as ChakraLink,
     Stack,
+    Text,
 } from '@chakra-ui/react'
 import { HeadFC, Link, PageProps } from 'gatsby'
 
@@ -70,10 +70,10 @@ const content = {
 
 const team = [
     {
-      name: 'Japhet Teshale',
-      title: 'Software Engineer',
-      photo: '/images/staff/japhet-teshale.png',
-      department: 'engineering',
+        name: 'Japhet Teshale',
+        title: 'Software Engineer',
+        photo: '/images/staff/japhet-teshale.png',
+        department: 'engineering',
     },
     {
         name: 'Eyuel Abebe',
@@ -101,28 +101,11 @@ const team = [
         department: 'engineering',
     },
     {
-        name: 'Sid Hackney',
-        title: 'Software Engineer',
-        photo: '/images/staff/sid.webp',
-        department: 'engineering',
-    },
-    {
         name: 'Michael Kalish',
         title: 'CTO',
         photo: '/images/staff/kalish-profile.webp',
         link: 'https://www.linkedin.com/in/mqkalish',
         department: 'leadership',
-    },
-    {
-        name: 'Bethlehem Mulugeta',
-        title: 'Recruiting',
-        department: 'support',
-    },
-    {
-        name: 'Kevon Paynter',
-        title: 'Product Manager',
-        photo: '/images/staff/kevon.webp',
-        department: 'product',
     },
     {
         name: 'Mike Liu',
@@ -159,29 +142,82 @@ const team = [
         department: 'engineering',
     },
     {
-        name: 'Logan Ricard',
+        name: 'Yishak Yusuf',
         title: 'Software Engineer',
-        photo: '/images/staff/logan-ricard.webp',
         department: 'engineering',
     },
     {
-        name: 'Carl Hicks',
-        title: 'Support Engineer',
-        photo: '/images/staff/carl-hicks.webp',
+        name: 'Paul Toner',
+        title: 'Software Engineer',
         department: 'engineering',
+    },
+    {
+        name: 'Andrew Pham',
+        title: 'Software Engineer',
+        department: 'engineering',
+    },
+    {
+        name: 'Bruk Abebe',
+        title: 'Software Engineer',
+        department: 'engineering',
+    },
+    {
+        name: 'Shijit Dasgupta',
+        title: 'Infrastructure Engineer',
+        department: 'engineering',
+    },
+    {
+        name: 'Nathan Stricker',
+        title: 'Software Engineer',
+        department: 'engineering',
+    },
+    {
+        name: 'Antoine Fillinger',
+        title: 'Software Engineer',
+        department: 'engineering',
+    },
+    {
+        name: 'Stephen Jordan',
+        title: 'Software Engineer',
+        department: 'engineering',
+    },
+    {
+        name: 'Ahmed Saeed',
+        title: 'QA Engineer',
+        department: 'engineering',
+    },
+    {
+        name: 'Sarah Parker',
+        title: 'Product Manager',
+        department: 'product',
+    },
+    {
+        name: 'Mel Woldeyesus',
+        title: 'Business Analyst',
+        department: 'product',
     },
     {
         name: 'Tshering Yudon',
         title: 'Designer',
         photo: '/images/staff/tshering-yudon.webp',
-        department: 'product',
+        department: 'design',
+    },
+    {
+        name: 'Jenn Snyder',
+        title: 'Designer',
+        department: 'design',
+    },
+    {
+        name: 'Katherine Kelly',
+        title: 'Designer',
+        department: 'design',
     },
     {
         name: 'Upendra Jejjala',
         title: 'Product Manager',
         photo: '/images/staff/upendra-avatar.jpg',
         department: 'product',
-    }
+    },
 ]
 
 const AboutPage: React.FC<PageProps> = () => {
@@ -189,71 +225,83 @@ const AboutPage: React.FC<PageProps> = () => {
         team: () => {
             return (
                 <>
-                {['leadership', 'product', 'engineering', 'support'].map((dept: string) => (
-                    <Box marginBottom="5">
-                        <Heading marginBottom="10">{dept.charAt(0).toUpperCase() + dept.slice(1)}</Heading>
-                        <SimpleGrid
-                            columns={{ base: 2, md: 4 }}
-                            mb={{ base: 12, md: 12 }}
-                            spacing="10"
-                        >                            
-                            {team
-                                .filter(
-                                    (person) =>
-                                        person.department == dept
-                                )
-                                .map((person) => {
-                                    return (
-                                        <Box>
-                                            <Avatar
-                                                name={person.name}
-                                                size={{ base: 'xl', md: '2xl' }}
-                                                mb={2}
-                                                src={person.photo}
-                                            />
-                                            {person.link ? (
+                    {['leadership', 'product', 'design', 'engineering'].map(
+                        (dept: string) => (
+                            <Box marginBottom="5">
+                                <Heading marginBottom="10">
+                                    {dept.charAt(0).toUpperCase() +
+                                        dept.slice(1)}
+                                </Heading>
+                                <SimpleGrid
+                                    columns={{ base: 2, md: 4 }}
+                                    mb={{ base: 12, md: 12 }}
+                                    spacing="10"
+                                >
+                                    {team
+                                        .filter(
+                                            (person) =>
+                                                person.department == dept
+                                        )
+                                        .map((person) => {
+                                            return (
                                                 <Box>
-                                                <ChakraLink
-                                                    isExternal
-                                                    textDecor={'underline'}
-                                                    href={person.link}
-                                                    fontSize={{
-                                                        base: 'xl',
-                                                        md: '2xl',
-                                                    }}
-                                                    fontWeight="semibold"
-                                                    mb={1}
-                                                >
-                                                    {person.name}
-                                                </ChakraLink>
+                                                    <Avatar
+                                                        name={person.name}
+                                                        size={{
+                                                            base: 'xl',
+                                                            md: '2xl',
+                                                        }}
+                                                        mb={2}
+                                                        src={person.photo}
+                                                    />
+                                                    {person.link ? (
+                                                        <Box>
+                                                            <ChakraLink
+                                                                isExternal
+                                                                textDecor={
+                                                                    'underline'
+                                                                }
+                                                                href={
+                                                                    person.link
+                                                                }
+                                                                fontSize={{
+                                                                    base: 'xl',
+                                                                    md: '2xl',
+                                                                }}
+                                                                fontWeight="semibold"
+                                                                mb={1}
+                                                            >
+                                                                {person.name}
+                                                            </ChakraLink>
+                                                        </Box>
+                                                    ) : (
+                                                        <Text
+                                                            fontSize={{
+                                                                base: 'xl',
+                                                                md: '2xl',
+                                                            }}
+                                                            fontWeight="semibold"
+                                                            mb={1}
+                                                        >
+                                                            {person.name}
+                                                        </Text>
+                                                    )}
+                                                    <Text
+                                                        fontSize={{
+                                                            base: 'lg',
+                                                            md: 'xl',
+                                                        }}
+                                                    >
+                                                        {person.title}
+                                                    </Text>
                                                 </Box>
-                                            ) : (
-                                                <Text
-                                                    fontSize={{
-                                                        base: 'xl',
-                                                        md: '2xl',
-                                                    }}
-                                                    fontWeight="semibold"
-                                                    mb={1}
-                                                >
-                                                    {person.name}
-                                                </Text>
-                                            )}                                            
-                                            <Text
-                                                fontSize={{
-                                                    base: 'lg',
-                                                    md: 'xl',
-                                                }}
-                                            >
-                                                {person.title}
-                                            </Text>
-                                        </Box>
-                                    )
-                                })}
-                        </SimpleGrid>
-                        <Divider />
-                    </Box>
-                ))}
+                                            )
+                                        })}
+                                </SimpleGrid>
+                                <Divider />
+                            </Box>
+                        )
+                    )}
                 </>
             )
         },
@@ -264,7 +312,8 @@ const AboutPage: React.FC<PageProps> = () => {
                     px={['0', '11']}
                     spacing="5"
                     margin={'auto'}
-                    direction={{ base: 'column', md: 'row' }}>
+                    direction={{ base: 'column', md: 'row' }}
+                >
                     <Button
                         variant="solid"
                         fontSize={{ base: '2xl', md: '2xl' }}
