@@ -44,11 +44,13 @@ const whoWeWorkWithLogs = [
     'healthcare-gov-logo.png',
     'aspire-logo.png',
     'cdc-logo.png',
+    'irs-logo.png',
+    'dos-logo.png',
 ]
 
 const content = {
     sectionHero: {
-        title: "Impactful Digital Services",
+        title: 'Impactful Digital Services',
         subHeading:
             'We build human-centered and high value government digital services that scale.',
         cta: 'Find out how',
@@ -78,7 +80,7 @@ const content = {
                 description:
                     'We leverage our extensive technology delivery experience to select the best technology tools for the job at hand. This means using mature, well-tested, and preferably open source tools, allowing our teams to focus on program specific workflows sooner.',
                 logo: <FaCode color="white" size={'24px'} />,
-            }
+            },
         ],
     },
     sectionAbout: {
@@ -100,10 +102,10 @@ const content = {
                 >
                     Digital Services Coalition
                 </ChakraLink>
-                , a collection of agile technology and design firms that
-                serve the government
+                , a collection of agile technology and design firms that serve
+                the government
             </>
-        ),        
+        ),
     },
     sectionContactUs: {
         title: 'Have any questions?',
@@ -129,7 +131,9 @@ const IndexPage: React.FC<PageProps> = () => {
                     </Heading>
                 }
                 subHeading={content.sectionHero.subHeading}
-                image={<Image src="/images/index/homepage-ux-collab.png"></Image>}
+                image={
+                    <Image src="/images/index/homepage-ux-collab.png"></Image>
+                }
                 cta={
                     <Button
                         as={Link}
@@ -240,14 +244,15 @@ const IndexPage: React.FC<PageProps> = () => {
                                     </CardBody>
                                 </Card>
                             ))}
-                        </SimpleGrid>                        
+                        </SimpleGrid>
 
                         <Stack
                             justify="center"
                             px={['0', '11']}
                             spacing="5"
                             margin={'auto'}
-                            direction={{ base: 'column', md: 'row' }}>
+                            direction={{ base: 'column', md: 'row' }}
+                        >
                             <Button
                                 variant="solid"
                                 fontSize={{ base: '2xl', md: '2xl' }}

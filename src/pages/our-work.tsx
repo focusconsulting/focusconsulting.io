@@ -83,7 +83,7 @@ const projects = [
             'Our staff led delivery of various critical product and engineering milestones including the payments workflow, department of revenue data processing, approval workflow integration, and core API and cloud architecture. This work required coordination across numerous department agencies and vendor teams.',
             'Since its launch in 2021, the program has paid over $1.3 billion in leave benefits.',
         ],
-        link: 'https://paidleave.mass.gov/create-account',
+        link: 'https://paidleave.mass.gov/oauth-start/',
     },
     {
         title: 'CDC ReportStream',
