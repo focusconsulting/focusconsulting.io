@@ -84,14 +84,10 @@ const content = {
         ],
     },
     sectionAbout: {
-        title: 'Diverse Perspectives',
+        title: 'Unique Perspectives',
         subHeading:
-            'As a minority-owned company, we are committed to bringing diverse backgrounds and experiences to government digital services.',
+            'We are committed to bringing industry best background and experiences to government digital services.',
         sba: "We're Small Business Administration (SBA) 8(a) Certified.",
-        dccbe: "We're based in DC and certified as a Small Business Enterprise (SBE) and Disadvantaged Business Enterprise (DBE).",
-        mambe: 'Massachusets and Boston Minority Business Enterprise (MBE) certified.',
-        mdmbe: 'Maryland SBE and DBE certified.',
-        vtdbe: 'Vermont DBE certified.',
         dsc: (
             <>
                 Part of the{' '}
@@ -106,6 +102,10 @@ const content = {
                 the government
             </>
         ),
+        dccbe: "We're based in DC and certified as a Small Business Enterprise (SBE) and Disadvantaged Business Enterprise (DBE).",
+        mambe: 'Massachusets and Boston Minority Business Enterprise (MBE) certified.',
+        mdmbe: 'Maryland SBE and DBE certified.',
+        vtdbe: 'Vermont DBE certified.',
     },
     sectionContactUs: {
         title: 'Have any questions?',

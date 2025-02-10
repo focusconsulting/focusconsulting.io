@@ -27,7 +27,7 @@ const content = {
         {
             title: 'Our Story',
             description:
-                'Focus was founded in 2019 to bring together a diverse set of industry and government experiences, and best-in-class digital services capabilities in agile software development, human-centered design, and DevSecOps. Our projects span work that addresses equity, healthcare, benefits, and learning across government and commercial clients.',
+                'Focus was founded in 2019 to bring together a diverse set of industry and government experiences, and best-in-class digital services capabilities in agile software development, human-centered design, and DevSecOps. Our projects span work that addresses healthcare, benefits, and learning across government and commercial clients.',
             backgroundColor: 'white',
         },
         {

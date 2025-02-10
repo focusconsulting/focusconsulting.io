@@ -1,25 +1,50 @@
 import * as React from 'react'
 
-import { Box, Button, Divider, Heading, Icon, ListItem, SimpleGrid, Stack, Text, UnorderedList, VStack, Link as ChakraLink } from '@chakra-ui/react'
+import {
+    Box,
+    Button,
+    Link as ChakraLink,
+    Divider,
+    Heading,
+    Icon,
+    ListItem,
+    SimpleGrid,
+    Stack,
+    Text,
+    UnorderedList,
+    VStack,
+} from '@chakra-ui/react'
+import { FaBalanceScale, FaCode, FaRegComments } from 'react-icons/fa'
+import { FaChartLine, FaDownload } from 'react-icons/fa6'
 import { HeadFC, Link, PageProps } from 'gatsby'
-import ReactMarkdown from 'react-markdown';
+import {
+    MdComputer,
+    MdOutlineCloudUpload,
+    MdOutlineDesignServices,
+    MdOutlineLanguage,
+    MdOutlineRocketLaunch,
+    MdScreenSearchDesktop,
+} from 'react-icons/md'
+import {
+    TbArrowGuide,
+    TbBrandOpenSource,
+    TbBuilding,
+    TbBuildingBank,
+    TbUsersGroup,
+} from 'react-icons/tb'
 
-import { AiOutlineAlert } from "react-icons/ai";
-import { MdOutlineDesignServices, MdScreenSearchDesktop, MdComputer, MdOutlineRocketLaunch, MdOutlineCloudUpload, MdOutlineLanguage } from 'react-icons/md'
-import { TbBuilding, TbBuildingBank, TbBrandOpenSource, TbArrowGuide, TbUsersGroup } from 'react-icons/tb'
-import { FaCode, FaBalanceScale, FaRegComments } from 'react-icons/fa'
-import { FaChartLine, FaDownload } from "react-icons/fa6";
+import { AiOutlineAlert } from 'react-icons/ai'
 import { FiHeart } from 'react-icons/fi'
 import { GiCongress } from 'react-icons/gi'
-import { MdOutlinePolicy } from "react-icons/md";
-import { TiFlowSwitch } from "react-icons/ti";
-import { RiPassValidLine } from "react-icons/ri";
-import { HiOutlineDocumentText } from "react-icons/hi";
-
 import Hero2 from '../layout/Hero'
+import { HiOutlineDocumentText } from 'react-icons/hi'
 import Layout from '../layout/Layout'
+import { MdOutlinePolicy } from 'react-icons/md'
+import ReactMarkdown from 'react-markdown'
+import { RiPassValidLine } from 'react-icons/ri'
 import { SEO } from '../components/seo'
 import Section from '../layout/Section'
+import { TiFlowSwitch } from 'react-icons/ti'
 
 const content = {
     heroTitle: 'How can we help?',
@@ -42,7 +67,7 @@ const content = {
                 {
                     title: 'Local & State Government',
                     description:
-                        'We strive to bring our experience in building benefits, equity, and healthcare systems to similar initiatives in other states and cities.',
+                        'We strive to bring our experience in building benefits and healthcare systems to similar initiatives in other states and cities.',
                     icon: TbBuildingBank,
                     iconColor: 'green.700',
                 },
@@ -64,11 +89,13 @@ const content = {
         },
         {
             title: 'Services',
-            description: 'Our services aim to identify program and user challenges, integrate user research and testing with policy expertise, and deliver digital services that meet program goals.',
+            description:
+                'Our services aim to identify program and user challenges, integrate user research and testing with policy expertise, and deliver digital services that meet program goals.',
             customContent: [
                 {
                     title: 'Research & Design',
-                    description: 'We lead our work with human-centered design and research to gain deep understanding of program needs.',
+                    description:
+                        'We lead our work with human-centered design and research to gain deep understanding of program needs.',
                     icon: FaCode,
                     expertise: [
                         'Human-Centered Design',
@@ -84,7 +111,7 @@ const content = {
                         {
                             text: 'Create a **service blueprint** and **user journey maps** to gain deep insights into existing user and agency workflows.',
                             icon: TiFlowSwitch,
-                        },                        
+                        },
                         {
                             text: '**Equitable user recruitment** practices to ensure accessible systems for all users.',
                             icon: FaBalanceScale,
@@ -101,21 +128,22 @@ const content = {
                             text: '**Continuous usability testing** to enable incremental delivery post-launch.',
                             icon: MdOutlineRocketLaunch,
                         },
-                    ]
+                    ],
                 },
                 {
                     title: 'Engineering & Technology',
-                    description: 'Our pragmatic approach leverages our extensive experience to select the best technology tools for the job at hand.',
+                    description:
+                        'Our pragmatic approach leverages our extensive experience to select the best technology tools for the job at hand.',
                     icon: FaCode,
                     expertise: [
                         'Systems that scale from pilot to millions of users',
                         'Government modernization or greenfield projects',
-                        'Full-stack web application development',                        
+                        'Full-stack web application development',
                         'Working with large data sets',
                         'Cloud modernization (AWS, Azure, Google Cloud)',
                         'Cloud infrastructure as code',
                         'DevSecOps and site reliability',
-                        'Automated QA'                        
+                        'Automated QA',
                     ],
                     how: [
                         {
@@ -124,40 +152,40 @@ const content = {
                         },
                         {
                             text: '**Deploy early to the cloud** with **robust CI/CD** to create environments for rapid iteration.',
-                            icon: MdOutlineCloudUpload
+                            icon: MdOutlineCloudUpload,
                         },
                         {
                             text: '**Well-documented technical specs** and **APIs** to ease collaboration with product folks.',
-                            icon: HiOutlineDocumentText
+                            icon: HiOutlineDocumentText,
                         },
                         {
                             text: 'Use **design systems** and **application templates** to quickly build on top of shared standards that address accessibility.',
-                            icon: MdOutlineDesignServices
-
+                            icon: MdOutlineDesignServices,
                         },
                         {
                             text: 'Use **plain language** to communicate with clarity and simplify user workflows.',
-                            icon: MdOutlineLanguage
+                            icon: MdOutlineLanguage,
                         },
                         {
                             text: 'Embed **system monitoring** and **security engineering** into development to consistently protect user privacy and policy compliance.',
-                            icon: AiOutlineAlert
-                        }
-                    ]
+                            icon: AiOutlineAlert,
+                        },
+                    ],
                 },
                 {
                     title: 'Product & Agile Delivery',
-                    description: 'Our product and project managers build stakeholder trust by consistently reducing delivery risk.',
+                    description:
+                        'Our product and project managers build stakeholder trust by consistently reducing delivery risk.',
                     expertise: [
                         'Agile Technology Planning and Delivery',
                         'Product Management',
                         'Project Management',
-                        'Program Management'
+                        'Program Management',
                     ],
                     how: [
                         {
                             text: 'Conduct stakeholder **listening sessions** at kickoff to craft high value roadmaps.',
-                            icon: FaRegComments
+                            icon: FaRegComments,
                         },
                         {
                             text: 'Define and track **success metrics** to make data-driven product decisions.',
@@ -165,18 +193,18 @@ const content = {
                         },
                         {
                             text: 'Work on **program unknowns** and a **simplified end-to-end workflow** first to de-risk delivery.',
-                            icon: TbArrowGuide
+                            icon: TbArrowGuide,
                         },
                         {
                             text: '**Strong documentation culture** to work efficiently in an increasingly distributed world.',
-                            icon: HiOutlineDocumentText
+                            icon: HiOutlineDocumentText,
                         },
                         {
                             text: 'Foster a **one-team culture** across vendors and our stakeholders to move at velocity during implementation.',
                             icon: TbUsersGroup,
-                        }
-                    ]
-                }
+                        },
+                    ],
+                },
             ],
             customId: 'services',
             backgroundColor: 'green.50',
@@ -241,7 +269,7 @@ const content = {
         //     backgroundColor: 'white',
         //     customId: 'expertise',
         //     anchor: 'expertise',
-        // },        
+        // },
         {
             title: "Let's Build Together",
             customId: 'work-with-us',
@@ -251,47 +279,98 @@ const content = {
 }
 
 const AboutPage: React.FC<PageProps> = () => {
-    const renderApproach = () => {
-
-    }
+    const renderApproach = () => {}
 
     const customRenderMap: any = {
         services: (customContent: any[]) => {
             return (
                 <Box>
-                    {
-                        customContent.map((item: any) => {
-                            return (
-                                <Box mb={25}>
-                                    <Heading fontSize={{ 'base': '3xl', 'md': '3xl' }} fontWeight="semibold" mb={2}>{item.title}</Heading>
-                                    <Divider mb={[3, null, 5]} />
-                                    <SimpleGrid columns={[1, null, 2]} spacing={5}>
-                                        <Box>
-                                            <Text fontSize="2xl" mb={5}>{item.description}</Text>
-                                            <Text fontSize="lg" color="teal" fontWeight="semibold" mb={[2, null, 3]}>Expertise</Text>
-                                            <UnorderedList fontSize="xl">
-                                                {item.expertise.map((exp: any) => (<ListItem>{exp}</ListItem>))}                                    
-                                            </UnorderedList>
-                                        </Box>
-                                        <Box>
-                                            <Text fontSize="lg" color="teal" fontWeight="semibold" mb={[2, null, 3]}>Approach</Text>
-                                            <VStack width="100%">
-                                                {item.how.map((how: any) => {
-                                                    return (
-                                                        <Box display="flex" bgColor="white" borderRadius={6} border="1px" borderColor="gray.200" width="100%" p={3}>
-                                                            <Box alignSelf="center" mb={{ base: 1, md: 1 }}><Icon as={how.icon || FaCode} boxSize={{ base: 6, md: 6 }} color="teal" mr={5} /></Box>
-                                                            <Text><ReactMarkdown>{how.text}</ReactMarkdown></Text>
+                    {customContent.map((item: any) => {
+                        return (
+                            <Box mb={25}>
+                                <Heading
+                                    fontSize={{ base: '3xl', md: '3xl' }}
+                                    fontWeight="semibold"
+                                    mb={2}
+                                >
+                                    {item.title}
+                                </Heading>
+                                <Divider mb={[3, null, 5]} />
+                                <SimpleGrid columns={[1, null, 2]} spacing={5}>
+                                    <Box>
+                                        <Text fontSize="2xl" mb={5}>
+                                            {item.description}
+                                        </Text>
+                                        <Text
+                                            fontSize="lg"
+                                            color="teal"
+                                            fontWeight="semibold"
+                                            mb={[2, null, 3]}
+                                        >
+                                            Expertise
+                                        </Text>
+                                        <UnorderedList fontSize="xl">
+                                            {item.expertise.map((exp: any) => (
+                                                <ListItem>{exp}</ListItem>
+                                            ))}
+                                        </UnorderedList>
+                                    </Box>
+                                    <Box>
+                                        <Text
+                                            fontSize="lg"
+                                            color="teal"
+                                            fontWeight="semibold"
+                                            mb={[2, null, 3]}
+                                        >
+                                            Approach
+                                        </Text>
+                                        <VStack width="100%">
+                                            {item.how.map((how: any) => {
+                                                return (
+                                                    <Box
+                                                        display="flex"
+                                                        bgColor="white"
+                                                        borderRadius={6}
+                                                        border="1px"
+                                                        borderColor="gray.200"
+                                                        width="100%"
+                                                        p={3}
+                                                    >
+                                                        <Box
+                                                            alignSelf="center"
+                                                            mb={{
+                                                                base: 1,
+                                                                md: 1,
+                                                            }}
+                                                        >
+                                                            <Icon
+                                                                as={
+                                                                    how.icon ||
+                                                                    FaCode
+                                                                }
+                                                                boxSize={{
+                                                                    base: 6,
+                                                                    md: 6,
+                                                                }}
+                                                                color="teal"
+                                                                mr={5}
+                                                            />
                                                         </Box>
-                                                    )
-                                                })}
-                                            </VStack>
-                                        </Box>
-                                    </SimpleGrid>
-                                </Box>
-                            )
-                        })
-                    }
-                    <Divider mb={25}/>
+                                                        <Text>
+                                                            <ReactMarkdown>
+                                                                {how.text}
+                                                            </ReactMarkdown>
+                                                        </Text>
+                                                    </Box>
+                                                )
+                                            })}
+                                        </VStack>
+                                    </Box>
+                                </SimpleGrid>
+                            </Box>
+                        )
+                    })}
+                    <Divider mb={25} />
                     <Box>
                         <Button
                             variant="solid"
@@ -305,7 +384,7 @@ const AboutPage: React.FC<PageProps> = () => {
                         </Button>
                     </Box>
                 </Box>
-            )            
+            )
         },
         // services: () => {
         //     return (
@@ -346,7 +425,7 @@ const AboutPage: React.FC<PageProps> = () => {
         },
         'work-with-us': () => {
             return (
-                <Box>                    
+                <Box>
                     <SimpleGrid
                         columns={{ base: 1, md: 3 }}
                         spacing={{ base: 12, md: 4 }}
@@ -377,16 +456,19 @@ const AboutPage: React.FC<PageProps> = () => {
                                     Services
                                 </Text>
                                 <Text fontSize="xl">
-                                    <b>541512</b>: Computer Systems Design Services
+                                    <b>541512</b>: Computer Systems Design
+                                    Services
                                 </Text>
                                 <Text fontSize="xl">
-                                    <b>518210</b>: Data Processing, Hosting, and Related Services
+                                    <b>518210</b>: Data Processing, Hosting, and
+                                    Related Services
                                 </Text>
                                 <Text fontSize="xl">
                                     <b>511210</b>: Software Publishers 
                                 </Text>
                                 <Text fontSize="xl">
-                                    <b>541519</b>: Other Computer Related Services
+                                    <b>541519</b>: Other Computer Related
+                                    Services
                                 </Text>
                             </Stack>
                         </Box>
@@ -402,7 +484,8 @@ const AboutPage: React.FC<PageProps> = () => {
                                     DC Certified Small Business Enterprise
                                 </Text>
                                 <Text fontSize="xl">
-                                    Massachusets Minority Small Business Enterprise
+                                    Massachusets Minority Small Business
+                                    Enterprise
                                 </Text>
                                 <Text fontSize="xl">
                                     Vermont Minority Small Business Enterprise
@@ -421,9 +504,9 @@ const AboutPage: React.FC<PageProps> = () => {
                         rightIcon={<FaDownload />}
                         mt={25}
                     >
-                        Capability Statement 
-                    </Button>                    
-                </Box>                
+                        Capability Statement
+                    </Button>
+                </Box>
             )
         },
     }
@@ -454,7 +537,9 @@ const AboutPage: React.FC<PageProps> = () => {
                         items={section.items}
                     >
                         {section.customId &&
-                            customRenderMap[section.customId](section.customContent)}
+                            customRenderMap[section.customId](
+                                section.customContent
+                            )}
                     </Section>
                 )
             })}

@@ -12,7 +12,6 @@ import {
     Tag,
     Text,
 } from '@chakra-ui/react'
-import { FaEquals, FaExternalLinkAlt } from 'react-icons/fa'
 import { HeadFC, Link, PageProps } from 'gatsby'
 import {
     MdBabyChangingStation,
@@ -20,6 +19,8 @@ import {
     MdOutlineSchool,
 } from 'react-icons/md'
 
+import { FaExternalLinkAlt } from 'react-icons/fa'
+import { FaGears } from 'react-icons/fa6'
 import Hero2 from '../layout/Hero'
 import Layout from '../layout/Layout'
 import { SEO } from '../components/seo'
@@ -30,10 +31,9 @@ export const focusAreas = {
     description: 'Our areas of focus reflect our values and expertise.',
     items: [
         {
-            title: 'Equity',
-            description:
-                'Enabling access to under-served and disadvantaged communities.',
-            icon: FaEquals,
+            title: 'Efficiency',
+            description: 'Choosing the right tool to better serve tax payers.',
+            icon: FaGears,
         },
         {
             title: 'Integrated Benefits',
@@ -61,7 +61,7 @@ export const focusAreas = {
 const content = {
     heroTitle: 'Our Work',
     heroDescription:
-        'We focus on projects with social impact. Success means people with better health, increased access to benefits to underserved communities, and better upskilling and job opportunities for disadvantaged communities.',
+        'We focus on projects that drive meaningful impact. Success means delivering efficient services that improve health outcomes, streamline access to benefits, and enhance upskilling and job opportunities.',
     sections: [
         focusAreas,
         {
@@ -77,7 +77,7 @@ const content = {
 const projects = [
     {
         title: 'Massachusetts Paid Family and Medical Leave',
-        tags: ['Integrated Benefits', 'Equity'],
+        tags: ['Integrated Benefits'],
         description: [
             'PFML was a new legislatively mandated state project that kicked off in January 2020 to provide Massachusetts residents the ability to apply for and receive payment for family and medical leave. Focus was part of the initial core team at project kickoff, and worked with our prime contracting partner (Nava PBC) and other stakeholders to staff project teams across product, engineering, DevOps and technical support.',
             'Our staff led delivery of various critical product and engineering milestones including the payments workflow, department of revenue data processing, approval workflow integration, and core API and cloud architecture. This work required coordination across numerous department agencies and vendor teams.',
@@ -94,7 +94,7 @@ const projects = [
     },
     {
         title: 'New Jersey Unemployment Insurance',
-        tags: ['Integrated Benefits', 'Equity'],
+        tags: ['Integrated Benefits'],
         description:
             'Our staff works with stakeholders to update and improve the experience and workflow when applying for unemployment insurance in New Jersey.',
         link: 'https://nj.gov/labor/myunemployment/before/about/howtoapply/applyonline.shtml',
@@ -110,14 +110,14 @@ const projects = [
     },
     {
         title: 'Healthcare for All',
-        tags: ['Healthcare', 'Equity'],
+        tags: ['Healthcare'],
         description:
             'Our staff have experience in key engineering leadership roles on HealthCare.gov (also known as ObamaCare) and MyMedicare.gov projects. Currently supporting CMS cloud transformation projects.',
         link: 'https://www.healthcare.gov/',
     },
     {
         title: 'DC Housing Insights',
-        tags: ['Equity'],
+        tags: [],
         description:
             'This open source tool provides housing advocates and government officials with insights on the state of affordable housing in Washington, DC. The project started as a Code for DC / CNHED / Greater DC initiative. The tool overlays multiple local and national data sources on top of an interactive map with various filter toggles to better visualize the data.',
         link: 'http://housinginsights.org/#',
@@ -139,7 +139,6 @@ const projects = [
 ]
 
 const tagToColor: any = {
-    Equity: 'blue',
     'Integrated Benefits': 'orange',
     Healthcare: 'green',
     'Learning & Development': 'purple',
