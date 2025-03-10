@@ -2009,15 +2009,15 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
+"@fontsource-variable/source-serif-4@^5.2.5":
+  version "5.2.5"
+  resolved "https://registry.yarnpkg.com/@fontsource-variable/source-serif-4/-/source-serif-4-5.2.5.tgz#97e8aa8e6bc3609d7de9d72d95cb2ff085d84939"
+  integrity sha512-pME7tAmvBb9F/fVsiXVQsiaBiAESutwkt+e6ix4BqTlrLZOcZFaGJvBu3oCcw1YKOtBUFcz3+89/WIhn+wjt3A==
+
 "@fontsource/inter@^4.5.14":
   version "4.5.14"
   resolved "https://registry.yarnpkg.com/@fontsource/inter/-/inter-4.5.14.tgz#3944b809aa7bf27dacd20bdc04a49fb738959724"
   integrity sha512-JDC9AocdPLuGsASkvWw9hS5gtHE7K9dOwL98XLrk5yjYqxy4uVnScG58NUvFMJDVJRl/7c8Wnap6PEs+7Zvj1Q==
-
-"@fontsource/manrope@^4.5.12":
-  version "4.5.12"
-  resolved "https://registry.yarnpkg.com/@fontsource/manrope/-/manrope-4.5.12.tgz#a3dc6427bc67037a3355084d214203ed74d696ef"
-  integrity sha512-s2G9tvaG8+p4OcxbYH9KS7JpgC+Tz2q7GNJLdKQJ/L2DrQZs6e0ARDhcA3KTTU/sVIE6MRfNPXvds8DNoQgEZw==
 
 "@gatsbyjs/parcel-namer-relative-to-cwd@2.0.0":
   version "2.0.0"

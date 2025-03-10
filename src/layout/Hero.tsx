@@ -1,31 +1,33 @@
-import { Box, Container, Flex, Spacer, Text } from '@chakra-ui/react'
+import { Box, Container, Flex, Heading, Spacer, Text } from '@chakra-ui/react'
 import React, { ReactNode } from 'react'
+import ReactMarkdown from 'react-markdown'
+import SharedContainer from './SharedContainer'
 
 type HeroProps = {
-    heading: ReactNode
-    subHeading: String | ReactNode
+    heading: string
+    subHeading: string
     image?: ReactNode
     cta?: ReactNode
 }
 
 export default ({ heading, subHeading, image, cta }: HeroProps) => (
-    <Box as="section" backgroundColor="sectionHero.dark">
-        <Container
-            centerContent
-            py="section.md"
-            minW={['container.xs', 'container.xl']}
-        >
+    <SharedContainer bgColor="sectionHero.dark" py="section.md">
             <Flex justifyContent={'space-between'} w="100%">
-                <Box w={['100%', '620px']}>
-                    {heading}
+                <Box w={['100%', '620px']} color="white">
+                    <Heading                        
+                        fontSize={['4xl', '5xl']}
+                        fontWeight={600}
+                        lineHeight={'120%'}
+                        mb="6"
+                    >
+                        <ReactMarkdown>{heading}</ReactMarkdown>
+                    </Heading>
                     <Text
-                        color="white"
-                        lineHeight={'32px'}
-                        fontWeight={500}
-                        fontSize={'24px'}
+                        lineHeight={8}
+                        fontSize={['lg', 'xl']}
                         mb="10"
                     >
-                        {subHeading}
+                        <ReactMarkdown>{subHeading}</ReactMarkdown>
                     </Text>
                     {cta}
                 </Box>
@@ -36,6 +38,5 @@ export default ({ heading, subHeading, image, cta }: HeroProps) => (
                     </Box>
                 )}
             </Flex>
-        </Container>
-    </Box>
+    </SharedContainer>
 )
