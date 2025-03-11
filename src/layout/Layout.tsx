@@ -3,6 +3,7 @@ import { Box } from '@chakra-ui/react'
 import Header from './Header'
 import Main from './Main'
 import Footer from './Footer'
+import './global.css';
 
 interface LayoutProps {
   children: any,
@@ -10,7 +11,7 @@ interface LayoutProps {
 
 const Layout = ({ children }: LayoutProps) => {
   return (
-    <Box>
+    <Box w="100%">
       <Header />
       <Main>
         {children}

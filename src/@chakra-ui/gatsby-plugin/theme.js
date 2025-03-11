@@ -1,7 +1,7 @@
 import { extendTheme } from '@chakra-ui/react'
 const overrides = {
     fonts: {
-        heading: `'Inter', sans-serif`,
+        heading: `'Source Serif 4 Variable', serif`,
         body: `'Inter', sans-serif`,
     },
     colors: {

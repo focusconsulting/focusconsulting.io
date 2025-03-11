@@ -21,6 +21,7 @@ import {
 import { FiMenu } from 'react-icons/fi'
 import Helmet from 'react-helmet'
 import { Link } from 'gatsby'
+import SharedContainer from './SharedContainer'
 
 const content = {
     nav: [
@@ -36,6 +37,14 @@ const content = {
             title: 'Our Work',
             path: '/our-work',
         },
+        {
+            title: 'Careers',
+            path: '/careers',
+        },
+        {
+            title: 'Contact Us',
+            path: 'mailto:hello@focusconsulting.io'
+        }
     ],
 }
 
@@ -43,9 +52,7 @@ const Header = () => {
     const isDesktop = useBreakpointValue({ base: false, lg: true })
 
     return (
-        <Box as="section" backgroundColor="sectionHero.dark" w="100%">
-            <Box as="nav" padding={[4, '8']}>
-                <Container maxW="7xl">
+        <SharedContainer bgColor="sectionHero.dark" py={[4, 8]}>
                     <HStack spacing="20" justify="space-between">
                         <Link to="/">
                             {/* <Heading
@@ -64,7 +71,8 @@ const Header = () => {
                                         <Button
                                             as={Link}
                                             to={navLink.path}
-                                            fontSize="2xl"
+                                            fontFamily="heading"
+                                            fontSize="22px"
                                             fontWeight="500"
                                             color="white"
                                             variant="link"
@@ -102,10 +110,8 @@ const Header = () => {
                             </Menu>
                         )}
                     </HStack>
-                </Container>
-            </Box>
-            <Helmet htmlAttributes={{ lang: 'en' }} />
-        </Box>
+                    <Helmet htmlAttributes={{ lang: 'en' }} />
+        </SharedContainer>
     )
 }
 

@@ -80,33 +80,20 @@ const FocusNavaJVPage: React.FC<PageProps> = () => {
       </Box>      
       <Box>
         <Hero
-          heading={(
-            <Heading
-                as="h1"
-                color="white"
-                fontSize={'6xl'}
-                fontWeight={700}
-                lineHeight={'120%'}
-                mb="6"
-            >
-              Impactful Digital Services
-            </Heading>
-          )}
-          subHeading={
-            <>We assemble strong teams across <ChakraLink isExternal href="https://focusconsulting.io" textDecor="underline">Focus</ChakraLink> and <ChakraLink textDecor="underline" isExternal href="https://navapbc.com">Nava PBC</ChakraLink> to deliver human-centered, high impact, and modern government digital services.</>
-          }
-          cta={
-            <Button
-                as={ChakraLink}
-                href="https://drive.google.com/file/d/1eOEd1TeQ-hyGi_5xa_AHj9SXemTcld2k/view?usp=sharing"
-                backgroundColor={'primary'}
-                color={'white'}
-                rightIcon={<FaDownload />}
-                isExternal
-            >
-              Capability Statement
-            </Button>
-          }
+          heading="Impactful Digital Services"
+          subHeading="We assemble strong teams across [Focus](https://focusconsulting.io) and [Nava PBC](https://navapbc.com) to deliver human-centered, high impact, and modern government digital services."
+          // cta={
+          //   <Button
+          //       as={ChakraLink}
+          //       href="https://drive.google.com/file/d/1eOEd1TeQ-hyGi_5xa_AHj9SXemTcld2k/view?usp=sharing"
+          //       backgroundColor={'primary'}
+          //       color={'white'}
+          //       rightIcon={<FaDownload />}
+          //       isExternal
+          //   >
+          //     Capability Statement
+          //   </Button>
+          // }
         />  
       </Box>
       {sections.map((section) => {
