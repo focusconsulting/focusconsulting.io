@@ -17,23 +17,7 @@ import {
 import { FaBalanceScale, FaCode, FaDatabase, FaDigitalTachograph, FaRegComments, FaRobot, FaShieldAlt } from 'react-icons/fa'
 import { FaChartLine, FaDownload } from 'react-icons/fa6'
 import { HeadFC, Link, PageProps } from 'gatsby'
-import {
-    MdComputer,
-    MdOutlineCloudUpload,
-    MdOutlineDesignServices,
-    MdOutlineLanguage,
-    MdOutlineRocketLaunch,
-    MdScreenSearchDesktop,
-} from 'react-icons/md'
-import {
-    TbArrowGuide,
-    TbBrandOpenSource,
-    TbBuilding,
-    TbBuildingBank,
-    TbUsersGroup,
-} from 'react-icons/tb'
 
-import { AiOutlineAlert } from 'react-icons/ai'
 import {
     MdComputer,
     MdOutlineCloudUpload,
@@ -55,11 +39,7 @@ import { FiHeart } from 'react-icons/fi'
 import { GiCongress } from 'react-icons/gi'
 import Hero2 from '../layout/Hero'
 import { HiOutlineDocumentText } from 'react-icons/hi'
-import { HiOutlineDocumentText } from 'react-icons/hi'
 import Layout from '../layout/Layout'
-import { MdOutlinePolicy } from 'react-icons/md'
-import ReactMarkdown from 'react-markdown'
-import { RiPassValidLine } from 'react-icons/ri'
 import { MdOutlinePolicy } from 'react-icons/md'
 import ReactMarkdown from 'react-markdown'
 import { RiPassValidLine } from 'react-icons/ri'
