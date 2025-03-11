@@ -14,7 +14,7 @@ import {
     UnorderedList,
     VStack,
 } from '@chakra-ui/react'
-import { FaBalanceScale, FaCode, FaRegComments } from 'react-icons/fa'
+import { FaBalanceScale, FaCode, FaDatabase, FaDigitalTachograph, FaRegComments, FaRobot, FaShieldAlt } from 'react-icons/fa'
 import { FaChartLine, FaDownload } from 'react-icons/fa6'
 import { HeadFC, Link, PageProps } from 'gatsby'
 import {
@@ -54,20 +54,24 @@ const content = {
         description:
             'Let us help you unlock more value and impact from your digital services.',
     },
-    approach: { ...approach, label: undefined, title: 'Our Approach' },
+    approach: {
+        title: 'Our Approach',
+        description: approach.description,
+        items: approach.items
+    },
     capabilities: {
         title: 'Capabilities',
         description:
-            'We bring strong capabilities to modern digital services delivery.',
+            'We bring a strong set of capabilities to modern digital services delivery.',
         items: [
             {
                 title: 'Digital Modernization',
                 description:
-                    'We have deep expertise modernizing legacy systems by **building next versions in parallel** or **enhancing live systems in place**.',
-                icon: FaCode,
+                    'We have deep expertise modernizing legacy systems by **building next versions in parallel** or **enhancing live systems in place**. In each case, our approach prioritizes de-risking delivery by addressing end-to-end integration challenges first.',
+                icon: FaDigitalTachograph,
                 ctas: [
                     {
-                        title: 'See our modernization projects',
+                        title: 'See Modernization Projects',
                         path: '/our-work?filter=modernization',
                     },
                 ],
@@ -75,23 +79,23 @@ const content = {
             {
                 title: 'AI & Emerging Technologies',
                 description:
-                    'Our staff bring varied experience in **machine learning**, **large language models (LLMs)**, and **generative AI**.',
-                icon: FaCode,
+                    'Our staff bring varied experience in **machine learning**, **large language models (LLMs)**, and **generative AI**. In our current work we are using AI to assist users with application forms, language translations, fraud detection, and increasing development velocity.',
+                icon: FaRobot,
                 ctas: [
                     {
-                        title: 'See AI assisted projects',
+                        title: 'See AI Supported Projects',
                         path: '/our-work?filter=ai',
                     },
                 ],
             },
             {
-                title: 'Security',
+                title: 'Security & Compliance',
                 description:
-                    'We embed security into every stage of the software development lifecycle, ensuring compliance and resilience from day one. With a zero-trust approach, we safeguard systems while enabling secure, efficient delivery of mission-critical software.',
-                icon: FaCode,
+                    'We embed security into every stage of the software development lifecycle, ensuring compliance and resilience from day one. With a **zero-trust approach**, we safeguard systems while enabling secure, efficient delivery of mission-critical software.',
+                icon: FaShieldAlt,
                 ctas: [
                     {
-                        title: 'See security case studies',
+                        title: 'See Security Case Studies',
                         path: '/our-work?filter=security',
                     },
                 ],
@@ -99,11 +103,11 @@ const content = {
             {
                 title: 'Enterprise Data',
                 description:
-                    'We specialize in building and scaling ETL processes that streamline data integration, ensuring reliable, high-quality insights. Our expertise in data management and governance enables secure, compliant, and efficient data operations for government agencies.',
-                icon: FaCode,
+                    'We specialize in building and scaling ETL processes that streamline data integration, ensuring reliable, high-quality insights. Our expertise in **data management and governance** enables secure, compliant, and efficient data operations for government agencies.',
+                icon: FaDatabase,
                 ctas: [
                     {
-                        title: 'See data assisted projects',
+                        title: 'See Data Pipeline Case Studies',
                         path: '/our-work?filter=data',
                     },
                 ],
@@ -341,10 +345,10 @@ const AboutPage: React.FC<PageProps> = () => {
                 heading={content.hero.title}
                 subHeading={content.hero.description}
             />
-            <SectionNew section={content.approach} backgroundColor="white" />
+            <SectionNew section={content.approach} backgroundColor="gray.50" />
             <SectionNew
                 section={content.capabilities}
-                backgroundColor="gray.50"
+                backgroundColor="white"
             />
             <SectionNew section={content.services} backgroundColor="green.50">
                 {renderServices()}

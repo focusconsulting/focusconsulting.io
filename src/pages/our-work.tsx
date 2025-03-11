@@ -23,7 +23,6 @@ import {
 import Hero2 from '../layout/Hero'
 import Layout from '../layout/Layout'
 import { SEO } from '../components/seo'
-import Section from '../layout/Section'
 import SectionNew from '../layout/SectionNew'
 
 const focusAreaTags = [
@@ -31,8 +30,8 @@ const focusAreaTags = [
     { title: 'Taxpayer Systems', color: 'orange' },
     { title: 'Benefits', color: 'green' },
     { title: 'Healthcare', color: 'purple' },
-    { title: 'Public Interest', color: 'cyan' },
-    { title: 'Other', color: 'gray' },
+    { title: 'Public Interest', color: 'teal' },
+    { title: 'Workforce Development', color: 'pink' },
 ]
 
 const capabilityTags = [
@@ -45,13 +44,15 @@ const capabilityTags = [
 const projects = [
     {
         title: 'Online Passport Renewal',
+        subtitle: 'April 2024 - Present',
         tags: ['Consular Services', 'Modernization', 'Security'],
         description:
-            '',
-        link: 'https://reportstream.cdc.gov/',
+            "Focus is supporting the Department of State and United States Digital Service launch the third iteration of their online passport renewal pilot system. Focus is leading the engineering implementation that leans heavily on recent user research and design to improve on previous versions. We are using a pilot approach to fully build and launch a mobile-first, accessible, US web design system based, fully integrated renewal application system in six months. As part of this effort, we are also putting the first systems into the cloud for the Department's consular division.",
+        link: 'https://travel.state.gov/content/travel/en/passports/have-passport.html',
     },
     {
         title: 'Massachusetts Paid Family and Medical Leave',
+        subtitle: 'Dec 2019 - Present',
         tags: ['Benefits', 'Healthcare', 'AI'],
         description: [
             'PFML was a new legislatively mandated state project that kicked off in January 2020 to provide Massachusetts residents the ability to apply for and receive payment for family and medical leave. Focus was part of the initial core team at project kickoff, and worked with our prime contracting partner (Nava PBC) and other stakeholders to staff project teams across product, engineering, DevOps and technical support.',
@@ -59,27 +60,35 @@ const projects = [
             'Since its launch in 2021, the program has paid over **$3 billion** in leave benefits.',
         ],
         link: 'https://paidleave.mass.gov/oauth-start/',
-    },
-    {
-        title: 'IRS Digital Transformation',
-        tags: ['Taxpayer Systems', 'Modernization'],
-        description:
-            '',
-        link: 'https://reportstream.cdc.gov/',
-    },
+    },    
     {
         title: 'IRS CIO Strategic Initiatives',
+        subtitle: 'Sept 2024 - Present',
         tags: ['Taxpayer Systems', 'Modernization', 'AI', 'Enterprise Data'],
         description:
-            '',
-        link: 'https://reportstream.cdc.gov/',
+            'We are currently supporting the office of the CIO to help application and business teams adopt a product centric approach to development while providing technical guidance, prototypes and roadmaps to assist teams modernize their applications.  We’ve been embedded on the Intake team where we’ve provided key guidance as they modernize a legacy COBOL system. We are also serving an important integration role to make sure the variety of vendor teams and IRS staff are all operating from a shared set of code quality standards and operational guides.',
     },
     {
         title: 'Maine Paid Leave',
+        subtitle: 'Jan 2025 - Present',
         tags: ['Benefits', 'Healthcare', 'AI'],
         description:
-            '',
-        link: 'https://reportstream.cdc.gov/',
+            'We are currently supporting the full implementation of the Main Paid Leave program. With the upcoming launch in Jan 2026, our team is moving at speed to conduct user research, and design and implement support for multiple leave types. We are developing the end to end workflow from scratch including the claimant portal, employer portal, and adjudication system.',
+        link: 'https://www.maine.gov/paidleave/',
+    },
+    {
+        title: 'IRS Digital Transformation',
+        subtitle: 'Aug 2024 - Feb 2025',
+        tags: ['Taxpayer Systems', 'Modernization'],
+        description:
+            ['Our team recently led an agency wide digital transformation initiative at the Internal Revenue Service. In the initial few months, we conducted interviews across agency divisions to identify key systemic obstacles to effective digital delivery. Outcomes from these interviews will result in a digital maturity assessment across key criteria, and a high-level living roadmap which includes the major activities to enable successful digital delivery.', 'As part of this contract, we also identified, selected, and implemented two “beacon” pilot projects that demonstrate visible improvements and new ways of working while incorporating the existing OneSDLC methodologies. These projects digitized the paper based W7 application form and improved compliance operations. We are developing impact and dynamic financial models to measure the value of the beacons.']
+    },
+    {
+        title: 'New Jersey Unemployment Insurance',
+        tags: ['Benefits', 'Modernization'],
+        description:
+            'Our staff is supporting the large modernization effort of the NJ unemployment insurance program. The strain of pandemic era unemployment claims triggered the modernization effort, which also introduced increase in fraudulent schemes. Our team is collaborating with multiple vendors and working closely with agency stakeholders to update and improve the experience and workflow for applicants, while updating the legacy mainframe system to use modern APIs.',
+        link: 'https://nj.gov/labor/myunemployment/before/about/howtoapply/applyonline.shtml',
     },
     {
         title: 'CDC ReportStream',
@@ -89,30 +98,24 @@ const projects = [
         link: 'https://reportstream.cdc.gov/',
     },
     {
-        title: 'New Jersey Unemployment Insurance',
-        tags: ['Benefits', 'Modernization'],
-        description:
-            'Our staff works with stakeholders to update and improve the experience and workflow when applying for unemployment insurance in New Jersey.',
-        link: 'https://nj.gov/labor/myunemployment/before/about/howtoapply/applyonline.shtml',
-    },
-    {
         title: 'Simpler Grants.gov',
         tags: ['Healthcare', 'Public Interest', 'Modernization'],
         description:
-            '',        
+            'This [open source](https://wiki.simpler.grants.gov/get-involved/get-involved) project is a modernization effort of the the current Grants.gov website and backend systems. It aims to make seeking grants and completing applications seamless and intuitive for grant-eligible organizations, while streamling publishing and monitoring for grantor agencies. Focus is supporting the design and implementation effort.', 
+        link: 'https://simpler.grants.gov/'
     },
     {
         title: 'Healthcare Marketplace',
         tags: ['Healthcare', 'Benefits'],
         description:
-            'Our staff have experience in key engineering leadership roles on HealthCare.gov and MyMedicare.gov projects. Currently supporting the evolution of healthCare.gov application and education sites.',
+            'Our staff has experience in key product and engineering leadership roles on HealthCare.gov and MyMedicare.gov projects. We are currently supporting a suite of education tools that help consumers get help shop for healthcare plans and understand their coverage options.',
         link: 'https://www.healthcare.gov/',
     },
     {
-        title: 'Infrastructure as a Service',
-        tags: ['Healthcare', 'Benefits'],
+        title: 'CMS Infrastructure as a Service',
+        tags: ['Healthcare', 'Security'],
         description:
-            '',        
+            'In 2018, the Centers for Medicare and Medicaid Services (CMS) embarked on a multi-year effort to modernize the Medicare Fee for Service (FFS) shared systems used to process Medicare fee-for-service claims. As part of this effort, the Operations and System Reliability Engineering (OSRE) team was created to lead this program in the areas of DevSecOps, Infrastructure support, and technical coordination with all Application Development Organization (ADO) teams. This ongoing project defined and applied common infrastructure and site reliability practices across multiple development teams ensuring each team has autonomy while maintaining standards. Focus is providing Infrastructure Engineering and Security Documentation services.',        
     },
     {
         title: 'Preventive Medicaid',
@@ -125,21 +128,21 @@ const projects = [
     },    
     {
         title: 'DC Housing Insights',
-        tags: ['Other'],
+        tags: ['Public Interest'],
         description:
-            'This open source tool provides housing advocates and government officials with insights on the state of affordable housing in Washington, DC. The project started as a Code for DC / CNHED / Greater DC initiative. The tool overlays multiple local and national data sources on top of an interactive map with various filter toggles to better visualize the data.',
+            'This [open source](https://github.com/focusconsulting/housing-insights) tool provides housing advocates and government officials with insights on the state of affordable housing in Washington, DC. The project started as a Code for DC / CNHED / Greater DC initiative. The tool overlays multiple local and national data sources on top of an interactive map with various filter toggles to better visualize the data. Focus is supporting the ongoing hosting, data update,  and feature development needs for this project.',
         link: 'http://housinginsights.org/#',
     },
     {
         title: 'Marriott Learning Platform',
-        tags: ['Other'],
+        tags: ['Workforce Development'],
         description:
             'We built regional and organization wide internal learning and development platforms that emphasized up-skilling and competency based career growth for staff.',
         link: 'https://www.marriott-ld.com/mda',
     },
     {
         title: 'Skills-Based Talent Platform',
-        tags: ['Other'],
+        tags: ['Workforce Development'],
         description:
             'Building a next generation talent marketplace platform that uses well defined and industry aligned job competency maps to more accurately match job seekers with employers.',
         link: 'https://aspireability.io/',
@@ -180,6 +183,8 @@ const AboutPage: React.FC<PageProps> = () => {
             <SectionNew
                 section={content.projects}                
                 backgroundColor="white"
+                columns={[1, 2]}
+                invisibleCard={true}
             />
         </Layout>
     )

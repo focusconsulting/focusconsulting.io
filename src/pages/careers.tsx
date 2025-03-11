@@ -131,7 +131,7 @@ const content = {
     },
     roles: {
         title: 'Open Roles',
-        description: "Don't see an role open that matches your experience? We have roles opening up all the time - share your interest in our resume drop off!"
+        description: "Don't see an role open that matches your experience? We have roles opening up all the time - share your interest using 'Future Opportunities' links!"
     }
 }
 

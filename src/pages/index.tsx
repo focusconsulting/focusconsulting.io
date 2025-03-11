@@ -23,17 +23,17 @@ export const approach = {
         'We never lose sight of program outcomes for our agency partners and their users.',
     items: [
         {
+            title: 'Bridging Policy, People, & Process',
+            description:
+                ' Our work involves translating complex government policy into effective services. We take a **Policy-Integrated Delivery** approach to partner with stakeholders and SMEs, and integrate their experience, process, and expertise with technical considerations for better program outcomes.',
+            icon: FaHandshake,
+        },
+        {
             title: 'Reducing Burden',
             description:
                 'We take our responsibility of building accessible government services for all users seriously. We center our work on **human-centered design and research** to gain deep insights into end user and agency staff needs.',
             icon: TbClockDown
-        },
-        {
-            title: 'Bridging Policy, People, & Process',
-            description:
-                ' Our work involves translating complex government policy into effective services. We take a **Policy Integrated Delivery** approach to partner with stakeholders and SMEs to integrate their experience, process, and expertise with technical considerations for better program outcomes.',
-            icon: FaHandshake,
-        },
+        },        
         {
             title: 'The Right Technology Tools',
             description:
@@ -83,19 +83,19 @@ const content = {
             },
             {
                 title: 'Healthcare Services',
-                description: "At the *CDC*, we're enhancing the pandemic era **test reporting system**. At *CMS* we are supporting the evolution of **HealthCare.gov** and supporting their **Infrastructure as a Service** initiative.",
+                description: "At the *CDC*, we're enhancing the pandemic era **test reporting system (ReportStream)** to support various test types. At *CMS* we are supporting the evolution of **HealthCare.gov** and supporting their **Infrastructure as a Service** initiative.",
                 icon: MdOutlineHealthAndSafety,
             }
         ],
         ctas: [
-            { title: 'See Details on our Work', path: '/our-work' }
+            { title: 'Learn about our Work', path: '/our-work' }
         ]
     },
     approach,
     talent: {
         label: 'About Us',
         title: 'Talent to deliver Impact',
-        description: 'We bring a unique set of industry expertise and best practices to government digital services.',
+        description: 'We bring a unique set of industry expertise and agile best practices to government digital services.',
         ctas: [
             { title: 'Our Values & Culture', path: '/about' },
             { title: 'Join our Team ', path: '/careers' },

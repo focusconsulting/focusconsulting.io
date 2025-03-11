@@ -30,7 +30,7 @@ const content = {
     hero: {
         title: 'About Us',
         description:
-        'Focus was founded in 2019 to bring together a unique set of industry and government experiences to government services. We take on projects that deliver meaningful impact for end users and agency programs through digital services.',
+        'Focus was founded in 2019 to bring together a unique set of industry and government experiences to government services. We take on projects that deliver meaningful impact for end users and agency programs.',
     },
     values: {
         title: 'Our Values',

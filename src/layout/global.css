@@ -1,3 +1,7 @@
 strong {
   font-weight: 600;
 }
+
+.section-item-body a {
+  text-decoration: underline;
+}
