@@ -12,7 +12,6 @@ import {
     Tag,
     Text,
 } from '@chakra-ui/react'
-import { FaEquals, FaExternalLinkAlt } from 'react-icons/fa'
 import { HeadFC, Link, PageProps } from 'gatsby'
 import {
     MdBabyChangingStation,
@@ -20,6 +19,8 @@ import {
     MdOutlineSchool,
 } from 'react-icons/md'
 
+import { FaExternalLinkAlt } from 'react-icons/fa'
+import { FaGears } from 'react-icons/fa6'
 import Hero2 from '../layout/Hero'
 import Layout from '../layout/Layout'
 import { SEO } from '../components/seo'
