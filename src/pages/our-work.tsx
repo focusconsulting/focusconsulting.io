@@ -70,11 +70,11 @@ const projects = [
             'We are currently supporting the office of the CIO to help application and business teams adopt a product centric approach to development while providing technical guidance, prototypes and roadmaps to assist teams modernize their applications.  We’ve been embedded on the Intake team where we’ve provided key guidance as they modernize a legacy COBOL system. We are also serving an important integration role to make sure the variety of vendor teams and IRS staff are all operating from a shared set of code quality standards and operational guides.',
     },
     {
-        title: 'Maine Paid Leave',
+        title: 'Minnesota Paid Leave',
         subtitle: 'Jan 2025 - Present',
         tags: ['Benefits', 'Healthcare', 'AI'],
         description:
-            'We are currently supporting the full implementation of the Main Paid Leave program. With the upcoming launch in Jan 2026, our team is moving at speed to conduct user research, and design and implement support for multiple leave types. We are developing the end to end workflow from scratch including the claimant portal, employer portal, and adjudication system.',
+            'We are currently supporting the full implementation of the Minnesota Paid Leave program. With the upcoming launch in Jan 2026, our team is moving at speed to conduct user research, and design and implement support for multiple leave types. We are developing the end to end workflow from scratch including the claimant portal, employer portal, and adjudication system.',
         link: 'https://www.maine.gov/paidleave/',
     },
     {

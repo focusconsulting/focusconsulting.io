@@ -78,7 +78,7 @@ const content = {
             },
             {
                 title: 'Benefits Programs',
-                description: "We helped launch the **Massachusetts Paid Family & Medical Leave** system, which has paid claimants over *$3 billion* since 2021. Currently supporting **Maine's Paid Leave** implementation, and modernizing **New Jersey's Unemployment Insurance** system.",
+                description: "We helped launch the **Massachusetts Paid Family & Medical Leave** system, which has paid claimants over *$3 billion* since 2021. Currently supporting **Minnesota's Paid Leave** implementation, and modernizing **New Jersey's Unemployment Insurance** system.",
                 icon: MdOutlineChildFriendly,
             },
             {
