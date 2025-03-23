@@ -10,11 +10,11 @@ import {
 import { MdOutlineChildFriendly, MdOutlineHealthAndSafety } from "react-icons/md";
 import { TbClockDown } from "react-icons/tb";
 import { HeadFC, PageProps } from 'gatsby';
-
 import Hero2 from '../layout/Hero';
 import Layout from '../layout/Layout';
 import SectionNew from '../layout/SectionNew';
 import { SEO } from '../components/seo';
+import { Center, Image } from '@chakra-ui/react';
 
 export const approach = {
     label: 'Approach',
@@ -109,11 +109,15 @@ const IndexPage: React.FC<PageProps> = () => {
             <Hero2
                 heading={content.hero.title}
                 subHeading={content.hero.subHeading}
-            />
+            />            
             <SectionNew
                 section={content.ourWork}
                 backgroundColor="white"
-            />
+            >   
+                <Center>
+                    <Image height={{ base: '100px', md: '200px' }} src="/images/index/focus-client-logos.png" />                 
+                </Center>               
+            </SectionNew>
             <SectionNew
                 section={content.approach}                
                 backgroundColor="gray.50"

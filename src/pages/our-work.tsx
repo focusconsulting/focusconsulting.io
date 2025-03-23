@@ -1,26 +1,6 @@
 import * as React from 'react'
 
-import {
-    Box,
-    Button,
-    Link as ExternalLink,
-    HStack,
-    Heading,
-    Icon,
-    IconButton,
-    Stack,
-    Tag,
-    Text,
-} from '@chakra-ui/react'
 import { HeadFC, Link, PageProps } from 'gatsby'
-import {
-    MdBabyChangingStation,
-    MdLocalHospital,
-    MdOutlineSchool,
-} from 'react-icons/md'
-
-import { FaExternalLinkAlt } from 'react-icons/fa'
-import { FaGears } from 'react-icons/fa6'
 import Hero2 from '../layout/Hero'
 import Layout from '../layout/Layout'
 import { SEO } from '../components/seo'
@@ -75,7 +55,7 @@ const projects = [
         tags: ['Benefits', 'Healthcare', 'AI'],
         description:
             'We are currently supporting the full implementation of the Minnesota Paid Leave program. With the upcoming launch in Jan 2026, our team is moving at speed to conduct user research, and design and implement support for multiple leave types. We are developing the end to end workflow from scratch including the claimant portal, employer portal, and adjudication system.',
-        link: 'https://www.maine.gov/paidleave/',
+        link: 'https://info.paidleave.mn.gov/',
     },
     {
         title: 'IRS Digital Transformation',
