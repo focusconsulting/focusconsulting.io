@@ -22,6 +22,22 @@ const capabilityTags = [
     { title: 'Enterprise Data', color: 'purple' },
 ]
 
+export const irsCIOProject = {
+    title: 'IRS CIO Strategic Initiatives',
+    subtitle: 'Sept 2024 - Present',
+    tags: ['Taxpayer Systems', 'Modernization', 'AI', 'Enterprise Data'],
+    description:
+        'We are currently supporting the office of the CIO to help application and business teams adopt a product centric approach to development while providing technical guidance, prototypes and roadmaps to assist teams modernize their applications.  We’ve been embedded on the Intake team where we’ve provided key guidance as they modernize a legacy COBOL system. We are also serving an important integration role to make sure the variety of vendor teams and IRS staff are all operating from a shared set of code quality standards and operational guides.',
+}
+
+export const irsBeaconsProject = {
+    title: 'IRS Digital Transformation',
+    subtitle: 'Aug 2024 - Feb 2025',
+    tags: ['Taxpayer Systems', 'Modernization'],
+    description:
+        ['Our team recently led an agency wide digital transformation initiative at the Internal Revenue Service. In the initial few months, we conducted interviews across agency divisions to identify key systemic obstacles to effective digital delivery. Outcomes from these interviews will result in a digital maturity assessment across key criteria, and a high-level living roadmap which includes the major activities to enable successful digital delivery.', 'As part of this contract, we also identified, selected, and implemented two “beacon” pilot projects that demonstrate visible improvements and new ways of working while incorporating the existing OneSDLC methodologies. These projects digitized the paper based W7 application form and improved compliance operations. We are developing impact and dynamic financial models to measure the value of the beacons.']
+}
+
 const projects = [
     {
         title: 'Online Passport Renewal',
@@ -42,13 +58,7 @@ const projects = [
         ],
         link: 'https://paidleave.mass.gov/oauth-start/',
     },    
-    {
-        title: 'IRS CIO Strategic Initiatives',
-        subtitle: 'Sept 2024 - Present',
-        tags: ['Taxpayer Systems', 'Modernization', 'AI', 'Enterprise Data'],
-        description:
-            'We are currently supporting the office of the CIO to help application and business teams adopt a product centric approach to development while providing technical guidance, prototypes and roadmaps to assist teams modernize their applications.  We’ve been embedded on the Intake team where we’ve provided key guidance as they modernize a legacy COBOL system. We are also serving an important integration role to make sure the variety of vendor teams and IRS staff are all operating from a shared set of code quality standards and operational guides.',
-    },
+    irsCIOProject,
     {
         title: 'Minnesota Paid Leave',
         subtitle: 'Jan 2025 - Present',
@@ -57,13 +67,7 @@ const projects = [
             'We are currently supporting the full implementation of the Minnesota Paid Leave program. With the upcoming launch in Jan 2026, our team is moving at speed to conduct user research, and design and implement support for multiple leave types. We are developing the end to end workflow from scratch including the claimant portal, employer portal, and adjudication system.',
         link: 'https://info.paidleave.mn.gov/',
     },
-    {
-        title: 'IRS Digital Transformation',
-        subtitle: 'Aug 2024 - Feb 2025',
-        tags: ['Taxpayer Systems', 'Modernization'],
-        description:
-            ['Our team recently led an agency wide digital transformation initiative at the Internal Revenue Service. In the initial few months, we conducted interviews across agency divisions to identify key systemic obstacles to effective digital delivery. Outcomes from these interviews will result in a digital maturity assessment across key criteria, and a high-level living roadmap which includes the major activities to enable successful digital delivery.', 'As part of this contract, we also identified, selected, and implemented two “beacon” pilot projects that demonstrate visible improvements and new ways of working while incorporating the existing OneSDLC methodologies. These projects digitized the paper based W7 application form and improved compliance operations. We are developing impact and dynamic financial models to measure the value of the beacons.']
-    },
+    irsBeaconsProject,
     {
         title: 'New Jersey Unemployment Insurance',
         tags: ['Benefits', 'Modernization'],

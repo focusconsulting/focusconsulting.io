@@ -57,7 +57,6 @@ const content = {
         title: 'We partner with government to build highly **impactful** digital services.',
         subHeading:
             'We deliver impact by improving access to critical services, modernizing resilient systems, and iterating at velocity.',
-        cta: 'Find out how',
     },
     ourWork: {
         label: 'Our Work',

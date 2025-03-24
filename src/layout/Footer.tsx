@@ -28,6 +28,7 @@ import { GiCongress } from 'react-icons/gi'
 import { Link } from 'gatsby'
 import SharedContainer from './SharedContainer'
 import ReactMarkdown from 'react-markdown'
+import { EngageUs } from './EngageUs'
 
 const content = {
     title: "Let's Build Together",
@@ -61,6 +62,7 @@ const content = {
             ]
         }
     ],
+    capabilityStatementLink: "https://drive.google.com/file/d/1wT2xWFwjAdaMEpi2K8TnEs6O9vkADmzO/view?usp=sharing",
     nav: [
         {
             title: 'Home',
@@ -95,57 +97,6 @@ const content = {
 }
 
 const Footer = () => {
-    const renderCompanyEngagementDetails = () => {
-        return (
-            <Box mb={[12, 16]}>
-                <Heading
-                    fontSize={['3xl', '4xl']}
-                    mb={[8, 8]}
-                >                
-                    {content.title}
-                </Heading>                    
-                <SimpleGrid
-                    columns={[1, 3]}
-                    spacing={[8, 20]}
-                    mb={[4, 12]}
-                >
-                    {content.workWithUsItems.map((item: { title: string, list: string[]}) => (
-                            <Box>
-                                <Heading
-                                    fontSize={['2xl', '3xl']}
-                                    fontWeight={[600, 500]}
-                                    mb={[2, 3]}
-                                >
-                                    {item.title}
-                                </Heading>
-                                <Stack spacing={[2, 3]}>
-                                    {item.list.map((display: string) => (
-                                        <Text fontSize={['lg', 'xl']}>
-                                            <ReactMarkdown>{display}</ReactMarkdown>
-                                        </Text>                                    
-                                    ))}
-                                </Stack>
-                            </Box>
-                        )
-                    )}                    
-                </SimpleGrid>
-                <Button
-                    variant={["solid", "solid"]}
-                    size="lg"
-                    fontSize={['xl', '2xl']}
-                    colorScheme="blue"
-                    as={ChakraLink}
-                    href="https://drive.google.com/file/d/1wT2xWFwjAdaMEpi2K8TnEs6O9vkADmzO/view?usp=sharing"
-                    isExternal
-                    leftIcon={<FaDownload />}
-                    mt={25}
-                >
-                    Capability Statement 
-                </Button>                    
-            </Box> 
-        )
-    }
-
     const renderCompanyContactAndNav = () => {
         const renderNav = () => {
             return (
@@ -220,7 +171,11 @@ const Footer = () => {
 
     return (
         <SharedContainer bgColor="sectionHero.dark" color="white" py={[16, 20]}>
-            {renderCompanyEngagementDetails()}         
+            <EngageUs
+                title={content.title}
+                engageUsItems={content.workWithUsItems}
+                capabilityStatementLink={content.capabilityStatementLink}
+            />
             {renderCompanyContactAndNav()}            
         </SharedContainer>
     )
