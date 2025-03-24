@@ -24,7 +24,7 @@ export const EngageUs = ({ title, engageUsItems, capabilityStatementLink}: Engag
         <SimpleGrid
             columns={[1, 3]}
             spacing={[8, 20]}
-            mb={[4, 12]}
+            mb={[4, 6]}
         >
             {engageUsItems.map((item: { title: string, list: string[]}) => (
                     <Box>
@@ -48,7 +48,7 @@ export const EngageUs = ({ title, engageUsItems, capabilityStatementLink}: Engag
         </SimpleGrid>
         <Button
             variant={["solid", "solid"]}
-            size="lg"
+            size={["lg", "lg"]}
             fontSize={['xl', '2xl']}
             colorScheme="blue"
             as={ChakraLink}

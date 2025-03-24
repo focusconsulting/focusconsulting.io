@@ -102,7 +102,7 @@ const Footer = () => {
             return (
                 <Stack
                     direction={['column', 'row']}
-                    spacing={8}
+                    spacing={[4, 8]}
                     mb="8"
                     alignItems={'start'}
                 >
@@ -161,11 +161,11 @@ const Footer = () => {
         }
 
         return (
-            <>
+            <Box mt={[12, 16]}>
                 {renderLogoAndTagline()}
                 {renderNav()}
                 {renderAddressAndCopyright()}
-            </>
+            </Box>
         )
     }
 
