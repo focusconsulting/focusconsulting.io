@@ -24,10 +24,10 @@ const capabilityTags = [
 
 export const irsCIOProject = {
     title: 'IRS CIO Strategic Initiatives',
-    subtitle: 'Sept 2024 - Present',
+    subtitle: 'Sept 2024 - March 2025',
     tags: ['Taxpayer Systems', 'Modernization', 'AI', 'Enterprise Data'],
     description:
-        'We are currently supporting the office of the CIO to help application and business teams adopt a product centric approach to development while providing technical guidance, prototypes and roadmaps to assist teams modernize their applications.  We’ve been embedded on the Intake team where we’ve provided key guidance as they modernize a legacy COBOL system. We are also serving an important integration role to make sure the variety of vendor teams and IRS staff are all operating from a shared set of code quality standards and operational guides.',
+        'We supported the office of the CIO to help application and business teams adopt a product centric approach to development while providing technical guidance, prototypes and roadmaps to assist teams modernize their applications. We were embedded on the Intake team where we provided key guidance as the team modernized a legacy COBOL system. We also served an important integration role to make sure the variety of vendor teams and IRS staff are all operating from a shared set of code quality standards and operational guides.',
 }
 
 export const irsBeaconsProject = {
@@ -38,15 +38,35 @@ export const irsBeaconsProject = {
         ['Our team recently led an agency wide digital transformation initiative at the Internal Revenue Service. In the initial few months, we conducted interviews across agency divisions to identify key systemic obstacles to effective digital delivery. Outcomes from these interviews will result in a digital maturity assessment across key criteria, and a high-level living roadmap which includes the major activities to enable successful digital delivery.', 'As part of this contract, we also identified, selected, and implemented two “beacon” pilot projects that demonstrate visible improvements and new ways of working while incorporating the existing OneSDLC methodologies. These projects digitized the paper based W7 application form and improved compliance operations. We are developing impact and dynamic financial models to measure the value of the beacons.']
 }
 
+export const fasfaTestAutomation = {
+    title: 'FAFSA Test Automation',
+    subtitle: 'May 2025 - Present',
+    tags: ['Public Interest', 'Modernization', 'AI'],
+    description:
+        ['Our team is supporting the Federal Student Aid office enhance, automate, and improve existing testing and observability functions for the Free Application for Federal Student Aid (FAFSA) system. FAFSA is a key federal program providing student loans, grants, and scholarships to US residents. Our work is focused on standardizing and improving the coverage of automated tests across the complex FAFSA system, and enhancing the observability of multiple user facing and back office systems to better track the end to end journey of a user.']
+}
+
+export const dosOccam = {
+    title: 'Passport Adjudication Modernization',
+    subtitle: 'July 2025 - Present',
+    tags: ['Consular Services', 'Modernization'],
+    description:
+        ['Our team is supporting the Department of State\'s Consular Division modernize the passport adjudication process by building a new centralized, accessible, and cloud-native adjudication platform MVP that will eventually replace multiple on-premises legacy systems.']
+}
+
+
+
 const projects = [
     {
-        title: 'Online Passport Renewal',
+        title: 'Online Passport Renewal (OPR 3.0)',
         subtitle: 'April 2024 - Present',
         tags: ['Consular Services', 'Modernization', 'Security'],
         description:
-            "Focus is supporting the Department of State and United States Digital Service launch the third iteration of their online passport renewal pilot system. Focus is leading the engineering implementation that leans heavily on recent user research and design to improve on previous versions. We are using a pilot approach to fully build and launch a mobile-first, accessible, US web design system based, fully integrated renewal application system in six months. As part of this effort, we are also putting the first systems into the cloud for the Department's consular division.",
+            "Focus is supporting the Department of State launch the third iteration of their online passport renewal pilot system. Focus is leading the engineering implementation that leans heavily on recent user research and design to improve on previous versions. We are using a pilot approach to fully build and launch a mobile-first, accessible, US web design system based, fully integrated renewal application system in Oct 2025. As part of this effort, we are also putting the first systems into the cloud for the Department's consular division.",
         link: 'https://travel.state.gov/content/travel/en/passports/have-passport.html',
     },
+    dosOccam,
+    fasfaTestAutomation,
     {
         title: 'Massachusetts Paid Family and Medical Leave',
         subtitle: 'Dec 2019 - Present',
@@ -58,7 +78,6 @@ const projects = [
         ],
         link: 'https://paidleave.mass.gov/oauth-start/',
     },    
-    irsCIOProject,
     {
         title: 'Minnesota Paid Leave',
         subtitle: 'Jan 2025 - Present',
@@ -68,6 +87,7 @@ const projects = [
         link: 'https://info.paidleave.mn.gov/',
     },
     irsBeaconsProject,
+    irsCIOProject,
     {
         title: 'New Jersey Unemployment Insurance',
         tags: ['Benefits', 'Modernization'],

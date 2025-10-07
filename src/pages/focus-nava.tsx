@@ -9,14 +9,14 @@ import { renderAvatar } from "../utils/ui-utils";
 import { approach } from './index'
 import SharedContainer from "../layout/SharedContainer";
 import SectionNew from "../layout/SectionNew";
-import { irsBeaconsProject, irsCIOProject } from "./our-work";
+import { dosOccam, fasfaTestAutomation, irsBeaconsProject, irsCIOProject } from "./our-work";
 import { EngageUs } from "../layout/EngageUs";
 
 const content = {
   hero: {
     title: 'Impactful Digital Services',
     subHeading:
-        'We assemble strong teams across [Focus](https://focusconsulting.io) and [Nava PBC](https://navapbc.com) to deliverx human-centered, high impact, and modern government digital services.',
+        'We assemble strong teams across [Focus](https://focusconsulting.io) and [Nava PBC](https://navapbc.com) to deliver human-centered, high impact, and modern government digital services.',
   },
   approach: {
     title: 'Our Approach',
@@ -25,7 +25,7 @@ const content = {
   },
   projects: {
     title: 'Projects',
-    items: [irsCIOProject, irsBeaconsProject]
+    items: [dosOccam, fasfaTestAutomation, irsCIOProject, irsBeaconsProject]
   },
   enageWithUs: {
     title: "Work with Us",

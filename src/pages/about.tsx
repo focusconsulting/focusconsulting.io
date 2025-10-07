@@ -86,20 +86,27 @@ const content = {
     },
     team: {
         title: 'Our Team',
-        description: 'Our 40 strong, distributed, and growing team of **Product Managers**, **Designers**, **Software Engineers**, and **Project Managers** is working on critical government services.',        
+        description: 'Our 50 strong, distributed, and growing team of **Product Managers**, **Designers**, **Software Engineers**, and **Project Managers** is working on critical government digital services.',        
         staff: [
             {
                 name: 'Ant Addis',
-                title: 'CEO',
+                title: 'Chief Executive Officer',
                 photo: '/images/staff/anteneh-avatar-new-sm.png',
                 link: 'https://www.linkedin.com/in/ant-addis',
                 department: 'leadership',
             },
             {
                 name: 'Michael Kalish',
-                title: 'CTO',
+                title: 'Chief Technical Officer',
                 photo: '/images/staff/kalish-profile.webp',
                 link: 'https://www.linkedin.com/in/mqkalish',
+                department: 'leadership',
+            },
+            {
+                name: 'Phedra Arthur Iruke',
+                title: 'Chief Delivery Officer',
+                photo: '/images/staff/phedra.jpg',
+                link: 'https://www.linkedin.com/in/phedraarthur',
                 department: 'leadership',
             }
         ],
