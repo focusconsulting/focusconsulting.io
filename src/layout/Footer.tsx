@@ -155,7 +155,7 @@ const Footer = () => {
                         <Text>{content.businessAddress1}</Text>
                         <Text>{content.businessAddress2}</Text>
                     </Box>
-                    <Text fontSize={['md', 'md']}>&copy; Focus 2025. All rights reserved.</Text>
+                    <Text fontSize={['md', 'md']}>&copy; Focus {(new Date()).getFullYear()}. All rights reserved.</Text>
                 </Box>                
             )
         }
